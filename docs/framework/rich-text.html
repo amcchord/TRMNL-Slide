@@ -1,0 +1,4480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich Text - TRMNL Framework</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 4px; overflow-x: auto; }
+        code { background: #f4f4f4; padding: 2px 4px; border-radius: 2px; }
+    </style>
+</head>
+<body>
+    <h1>Rich Text</h1>
+    <div class="content">
+
+  
+
+  
+    
+      
+        
+          <a href="/framework_v2" class="inline-block flex items-center ml-1">
+              
+              
+            Framework
+          </a>
+        
+
+        
+        
+          
+            
+          
+        
+
+        
+        
+            
+
+    
+    
+    
+        
+                
+  
+ 
+                
+
+  
+ 
+                
+                
+        
+    
+    
+    
+    
+        
+                
+  
+ 
+                
+  
+ 
+                
+                
+        
+    
+    
+            
+    
+    
+    
+    Amazon Kindle 2024
+Amazon Kindle 7
+Amazon Kindle Oasis 2
+Amazon Kindle PW 6th Gen
+Amazon Kindle PW 7th Gen
+Inkplate 10
+Inky Impression 13.3
+Inky Impression 7.3
+Kobo Aura HD
+Kobo Aura One
+Kobo Libra 2
+TRMNL
+    
+    
+    1-bit
+2-bit
+4-bit
+    
+    
+    
+        
+                
+  
+ 
+        
+    
+
+            
+
+          
+          <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/blog">Blog</a>
+          <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/developers">Developers</a>
+
+            <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/login">Login</a>
+            <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/signup">Sign up</a>
+            <a href="/" class="ml-2 inline-block py-2 px-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-full transition-colors duration-200 text-sm tracking-tight">
+              Get TRMNL
+            </a>
+        
+      
+
+      
+      
+        
+          
+          
+            
+              
+                
+                  <a href="/" class="inline-block flex items-center">
+                      
+                      
+                    Framework Docs
+                  </a>
+                
+
+                
+                  
+                    
+                  
+                
+              
+            
+          
+
+          
+          
+            
+                
+
+    
+    
+    
+        
+                
+  
+ 
+                
+
+  
+ 
+                Light Mode
+                
+                
+        
+    
+    
+    
+    
+        
+                
+  
+ 
+                
+  
+ 
+                Landscape
+                
+                
+        
+    
+    
+            
+    
+    
+    
+    Amazon Kindle 2024
+Amazon Kindle 7
+Amazon Kindle Oasis 2
+Amazon Kindle PW 6th Gen
+Amazon Kindle PW 7th Gen
+Inkplate 10
+Inky Impression 13.3
+Inky Impression 7.3
+Kobo Aura HD
+Kobo Aura One
+Kobo Libra 2
+TRMNL
+    
+    
+    1-bit
+2-bit
+4-bit
+    
+    
+    
+        
+                
+  
+ 
+                Reset to Defaults
+        
+    
+
+                
+              
+              
+              <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/blog">Blog</a>
+              <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/developers">Developers</a>
+
+                <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/login">Login</a>
+                <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/signup">Sign up</a>
+                <a href="/" class="mt-2 inline-block py-2 px-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-full transition-colors duration-200 text-sm tracking-tight">
+                  Get TRMNL
+                </a>
+            
+          
+        
+      
+    
+  
+
+
+  
+
+ 
+
+  
+  
+    
+    
+      
+        
+    
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Utilities</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/size">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Size
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/spacing">
+                  
+                    
+                      
+
+
+
+                    
+                    Spacing
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/gap">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Gap
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/flex">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Flex
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/grid">
+                  
+                    
+                      
+
+
+                    
+                    Grid
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/background">
+                  
+                    
+                      
+
+
+
+                    
+                    Background
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/border">
+                  
+                    
+                      
+
+
+
+
+                    
+                    Border
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/rounded">
+                  
+                    
+                      
+  
+
+
+                    
+                    Rounded
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/visibility">
+                  
+                    
+                      
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+  
+    
+      
+    
+  
+ 
+                    
+                    Visibility
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/responsive">
+                  
+                    
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+                    
+                    Responsive
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/text">
+                  
+                    
+                      
+
+
+
+
+
+                    
+                    Text
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/image">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Image
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/image_stroke">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Image Stroke
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/text_stroke">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Text Stroke
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/clamp">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Clamp
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/scale">
+                  
+                    
+                      
+  
+  
+  
+  
+ 
+                    
+                    Scale
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/aspect_ratio">
+                  
+                    
+                      
+  
+
+
+                    
+                    Aspect Ratio
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/responsive_test">
+                  
+                    
+                      
+  
+
+
+                    
+                    Responsive Test
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Base</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/screen">
+                  
+                    
+                      
+  
+ 
+                    
+                    Screen
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/view">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    View
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/layout">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Layout
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/title_bar">
+                  
+                    
+                      
+
+
+
+
+
+                    
+                    Title Bar
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/columns">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Columns
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/mashup">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Mashup
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Elements</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/title">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Title
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/label">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Label
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/description">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Description
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/divider">
+                  
+                    
+                      
+  
+
+
+                    
+                    Divider
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Components</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 font-medium" data-turbo="false" href="/framework_v2/rich_text">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Rich Text
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/item">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Item
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/table">
+                  
+                    
+                      
+
+
+                    
+                    Table
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/chart">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Chart
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/progress">
+                  
+                    
+                      
+  
+
+
+                    
+                    Progress
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Modulations</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/overflow">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Overflow
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/format_value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Format Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/fit_value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Fit Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/content_limiter">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Content Limiter
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/pixel_perfect">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Pixel Perfect
+                
+</a>              </li>
+          </ul>
+        
+    
+ 
+      
+    
+
+    
+    
+      
+      
+        
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+      <h1 class="font-heading tracking-tight font-medium text-gray-900 dark:text-white text-2xl md:text-3xl mb-0.5">Rich Text</h1>
+    <p class="max-w-96 text-md md:text-lg text-gray-500 leading-tight md:leading-tight"></p>
+  
+
+
+
+
+  
+
+  
+    <p class="text-gray-600 dark:text-gray-400">
+      The Rich Text component provides a flexible container for displaying text content with consistent styling and layout options.
+      It's commonly used for paragraphs, articles, and other formatted text content that needs to maintain readability and visual hierarchy.
+    </p>
+
+    
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/rich_text#understanding-richtext-components" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="understanding-richtext-components" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Understanding Richtext Components</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            The richtext system consists of two key parts working together: the parent <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">.richtext</code> container and its natural child <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">.content</code> component.
+          </p>
+
+          <p class="text-gray-600 dark:text-gray-400 mb-8 mt-3">
+            The parent <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">.richtext</code> container is designed for flexibility and can hold any content. It controls the overall placement and spacing of the component within your layout.
+          </p>
+
+          <p class="text-gray-600 dark:text-gray-400 mb-8 mt-3">
+            The <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">.content</code> component is where your actual text content lives. It provides additional styling and formatting options specific to text.
+          </p>
+
+          <p class="text-gray-600 dark:text-gray-400 mb-8 mt-3">
+            Both components have separate alignment modifiers that serve different purposes:
+          </p>
+
+          <ul class="list-disc pl-8 mt-3 text-gray-600 dark:text-gray-400 mb-8">
+            <li><code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">richtext--left/center/right</code>: Controls how the richtext container is positioned within its parent</li>
+            <li><code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">content--left/center/right</code>: Controls how the content component is positioned within the richtext container</li>
+            <li><code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">text--left/center/right</code>: Controls the actual text alignment within the content component</li>
+          </ul>
+
+          <p class="text-gray-600 dark:text-gray-400 mb-8 mt-3">
+            This multi-level alignment system provides maximum flexibility for positioning both the component and its content independently.
+          </p>
+        
+      
+
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/rich_text#rich-text-alignment" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="rich-text-alignment" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Rich Text Alignment</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            The Rich Text component can be aligned in three different ways: left, center, or right.
+            Each alignment option provides different text positioning to suit various design needs.
+          </p>
+        
+
+        
+          
+            <a href="https://usetrmnl.com/framework_v2/rich_text#left-aligned" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 0px">#</a><h4 id="left-aligned" class="inline text-md font-medium text-gray-700 dark:text-gray-200 mb-2 ">Left Aligned</h4>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Left alignment is the default and most readable format for longer text content, ideal for paragraphs and articles.
+            </p>
+          
+
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                        
+                          <p>This is an example of left-aligned rich text content. This alignment is generally best for readability with longer paragraphs of text.</p>
+                          <p>Multiple paragraphs will maintain the same alignment, making it easy to read through longer content while maintaining visual consistency.</p>
+                        
+                      
+                    
+
+                    
+                      
+                      Rich Text
+                      Left Aligned
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;div class="richtext richtext--left gap--large"&gt;
+  &lt;img class="image" src="/assets/trmnl--glyph-black-large.svg" /&gt;
+  &lt;div class="content content--left gap text--left"&gt;
+    &lt;p&gt;This is an example of left-aligned rich text content.&lt;/p&gt;
+    &lt;p&gt;Multiple paragraphs will maintain the same alignment.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+
+          
+        
+
+        
+          
+            <a href="https://usetrmnl.com/framework_v2/rich_text#center-aligned" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 0px">#</a><h4 id="center-aligned" class="inline text-md font-medium text-gray-700 dark:text-gray-200 mb-2 ">Center Aligned</h4>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Center alignment is ideal for headings, quotes, or shorter text that needs to be highlighted or visually balanced within the layout.
+            </p>
+          
+
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                        
+                          <p>This is an example of center-aligned rich text content.</p>
+                          <p>Centered text works well for quotes, headings, or highlighted information that needs visual emphasis.</p>
+                        
+                      
+                    
+
+                    
+                      
+                      Rich Text
+                      Center Aligned
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;div class="richtext richtext--center gap--large"&gt;
+  &lt;img class="image" src="/assets/trmnl--glyph-black-large.svg" /&gt;
+  &lt;div class="content content--center gap text--center"&gt;
+    &lt;p&gt;This is an example of center-aligned rich text content.&lt;/p&gt;
+    &lt;p&gt;Centered text works well for quotes or highlighted information.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+
+          
+        
+
+        
+          
+            <a href="https://usetrmnl.com/framework_v2/rich_text#right-aligned" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 0px">#</a><h4 id="right-aligned" class="inline text-md font-medium text-gray-700 dark:text-gray-200 mb-2 ">Right Aligned</h4>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Right alignment is less common but can be useful for specific design scenarios or to create visual tension in layouts.
+            </p>
+          
+
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                        
+                          <p>This is an example of right-aligned rich text content.</p>
+                          <p>Right alignment can be used for captions, sidebars, or to create visual interest through contrasting alignments.</p>
+                        
+                      
+                    
+
+                    
+                      
+                      Rich Text
+                      Right Aligned
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;div class="richtext richtext--right gap--large"&gt;
+  &lt;img class="image" src="/assets/trmnl--glyph-black-large.svg" /&gt;
+  &lt;div class="content content--right gap text--right"&gt;
+    &lt;p&gt;This is an example of right-aligned rich text content.&lt;/p&gt;
+    &lt;p&gt;Right alignment can be used for captions or sidebars.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+
+          
+        
+      
+
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/rich_text#content-size-variants" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="content-size-variants" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Content Size Variants</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            The Rich Text component offers different content size variants to accommodate various text hierarchies and emphasis needs.
+          </p>
+        
+
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          <p>This is large size rich text content.
+                          Perfect for headings and emphasis.</p>
+                        
+
+                        
+                          <p>This is the default size for rich text content.
+                          Optimized for readability and general use.</p>
+                        
+
+                        
+                          <p>This is small size rich text content.
+                          Ideal for captions and secondary information.</p>
+                        
+                      
+                    
+
+                    
+                      
+                      Rich Text
+                      Size Variants
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;div class="richtext gap--large"&gt;
+  &lt;!-- Large Size --&gt;
+  &lt;div class="content content--large"&gt;
+    &lt;p&gt;This is large size rich text content.&lt;br&gt;
+    Perfect for headings and emphasis.&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Default Size --&gt;
+  &lt;div class="content"&gt;
+    &lt;p&gt;This is the default size for rich text content.&lt;br&gt;
+    Optimized for readability and general use.&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Small Size --&gt;
+  &lt;div class="content content--small"&gt;
+    &lt;p&gt;This is small size rich text content.&lt;br&gt;
+    Ideal for captions and secondary information.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+
+          
+        
+      
+
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/rich_text#controlling-width" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="controlling-width" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Controlling Width</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            By default, the Rich Text content takes up as much space as it needs and is centered in the layout, expanding up to a maximum width.
+            However, you can precisely control the width of content using Size utility classes.
+          </p>
+
+          
+            
+              
+                
+  
+
+
+              
+              
+                <p class="leading-none text-sm font-medium">
+                  Control exact width and height dimensions with size utilities
+                </p>
+                <p class="text-sm md:mt-0 md:ml-6">
+                  <a class="font-medium rounded-lg text-xs px-2 py-1 inline-flex items-center transition duration-150 justify-center shrink-0 gap-1.5 whitespace-nowrap text-blue-100 dark:text-blue-300 bg-blue-700 dark:bg-blue-900 hover:bg-blue-800 dark:hover:bg-blue-800 focus:outline-none" target="_blank" href="/framework_v2/size">
+                    View Size Documentation
+                    
+  
+
+
+</a>                </p>
+              
+            
+          
+        
+
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          <p>This Rich Text content has a fixed width of 240 pixels using utility classes.</p>
+                          <p>Notice how the text is constrained to this specific width regardless of the container size.</p>
+                        
+                      
+                    
+
+                    
+                      
+                      Rich Text
+                      Fixed Width: 240px
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;div class="richtext richtext--center gap--large"&gt;
+  &lt;div class="content w--[240px] text--center gap"&gt;
+    &lt;p&gt;This Rich Text content has a fixed width of 240 pixels using utility classes.&lt;/p&gt;
+    &lt;p&gt;Notice how the text is constrained to this specific width regardless of the container size.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+
+          
+
+          
+            <p class="text-gray-600 dark:text-gray-400 mb-8">
+              You can use any of the Size system's fixed sizes (<code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">w--32</code>, <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">w--64</code>, etc.),
+              arbitrary sizes (<code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">w--[250px]</code>), or responsive sizes (<code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">w--full</code>, <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">w--auto</code>).
+              This flexibility lets you create perfectly sized text blocks for any layout need.
+            </p>
+          
+        
+      
+
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/rich_text#integration-with-content-limiter" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="integration-with-content-limiter" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Integration with Content Limiter</h3>
+
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            The Rich Text component works seamlessly with the Content Limiter utility to handle overflowing text. When combined,
+            it automatically adjusts text size to fit the available space, which is particularly useful in constrained layouts.
+          </p>
+
+          <p class="text-gray-600 dark:text-gray-400 mb-8 mt-3">
+            Simply add the <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">data-content-limiter="true"</code> attribute to your richtext content element. You can also specify a custom maximum height using the <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">data-content-max-height</code> attribute (e.g., <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">data-content-max-height="140"</code>).
+          </p>
+
+          <p class="text-gray-600 dark:text-gray-400 mb-8 mt-3">
+            In mashups, Content Limiter automatically applies different default height thresholds based on the view type (400px for full and half_vertical views, 160px for quadrant and half_horizontal views). For custom or complex layouts that don't use standard view components, you'll need to manually specify an appropriate <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">data-content-max-height</code> value to ensure proper content scaling.
+          </p>
+
+          
+            
+              
+                
+  
+
+
+              
+              
+                <p class="leading-none text-sm font-medium">
+                  Automatically resize text when content exceeds height limits
+                </p>
+                <p class="text-sm md:mt-0 md:ml-6">
+                  <a class="font-medium rounded-lg text-xs px-2 py-1 inline-flex items-center transition duration-150 justify-center shrink-0 gap-1.5 whitespace-nowrap text-blue-100 dark:text-blue-300 bg-blue-700 dark:bg-blue-900 hover:bg-blue-800 dark:hover:bg-blue-800 focus:outline-none" target="_blank" href="/framework_v2/content_limiter">
+                    View Content Limiter Documentation
+                    
+  
+
+
+</a>                </p>
+              
+            
+          
+        
+
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          
+                            <p class="text--left">
+                              The Rich Text component with Content Limiter will automatically adjust text size when content exceeds the height threshold for the current view. This is particularly useful for views with limited vertical space such as quadrants or half-horizontal layouts.
+                              
+                              Notice how this text is rendered smaller to fit within the quadrant view. Without Content Limiter, this text would overflow the container.
+                            </p>
+                          
+                        
+                      
+
+                      
+                        
+                        Rich Text
+                        With Content Limiter
+                      
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;div class="richtext richtext--left gap--large"&gt;
+  &lt;div class="content" data-content-limiter="true"&gt;
+    &lt;p class="text--left"&gt;
+      The Rich Text component with Content Limiter will automatically
+      adjust text size when content exceeds the height threshold.
+      This is particularly useful for views with limited vertical space.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+
+          
+        
+      
+
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/rich_text#integration-with-pixel-perfect" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="integration-with-pixel-perfect" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Integration with Pixel Perfect</h3>
+
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            For optimal text rendering on e-ink displays, the Rich Text component can be enhanced with the Pixel Perfect utility.
+            This ensures text is rendered with crisp edges by aligning precisely to the pixel grid, preventing blurry or inconsistent text weight.
+          </p>
+
+          <p class="text-gray-600 dark:text-gray-400 mb-8 mt-3">
+            Simply add the <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">data-pixel-perfect="true"</code> attribute to your richtext content element.
+          </p>
+
+          
+            
+              
+                
+  
+
+
+              
+              
+                <p class="leading-none text-sm font-medium">
+                  Ensure crisp text rendering on 1-bit displays
+                </p>
+                <p class="text-sm md:mt-0 md:ml-6">
+                  <a class="font-medium rounded-lg text-xs px-2 py-1 inline-flex items-center transition duration-150 justify-center shrink-0 gap-1.5 whitespace-nowrap text-blue-100 dark:text-blue-300 bg-blue-700 dark:bg-blue-900 hover:bg-blue-800 dark:hover:bg-blue-800 focus:outline-none" target="_blank" href="/framework_v2/pixel_perfect">
+                    View Pixel Perfect Documentation
+                    
+  
+
+
+</a>                </p>
+              
+            
+          
+        
+
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        <p>This text is rendered with pixel perfect alignment, ensuring that each character aligns precisely with the pixel grid. Notice how the text appears crisp and clear with consistent weight.</p>
+                        <p>Pixel Perfect is especially important for e-ink displays that use a 1-bit color space (just black and white), where anti-aliased gray pixels are forced to become either fully black or fully white.</p>
+                      
+                    
+
+                    
+                      
+                      Rich Text
+                      With Pixel Perfect
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;div class="richtext richtext--left gap"&gt;
+  &lt;div class="content" data-pixel-perfect="true"&gt;
+    &lt;p&gt;
+      This text is rendered with pixel perfect alignment, ensuring that each character aligns precisely with the pixel grid. Notice how the text appears crisp and clear with consistent weight.
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="content" data-pixel-perfect="true"&gt;
+    &lt;p&gt;
+      Pixel Perfect is especially important for e-ink displays that use a 1-bit color space (just black and white), where anti-aliased gray pixels are forced to become either fully black or fully white.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+
+          
+        
+      
+
+      
+  
+    
+        <a class="w-full flex flex-col items-start space-y-4 text-gray-700 dark:text-gray-200 rounded-xl bg-gray-200 dark:bg-gray-700 p-4 hover:bg-gray-300 dark:hover:bg-gray-650 group transition duration-150 ease-in-out h-full" href="/framework_v2/divider">
+          
+            
+              
+  
+
+
+            
+            
+              <p class="leading-none text-lg font-regular">Divider</p>
+              <p class="text-sm text-gray-550 dark:text-gray-500 flex-grow">Create horizontal or vertical dividers between elements</p>
+            
+          
+          
+            
+  
+
+            Previous
+          
+</a>    
+
+    
+        <a class="w-full flex flex-col items-end space-y-4 text-gray-700 dark:text-gray-200 rounded-xl bg-gray-200 dark:bg-gray-700 p-4 hover:bg-gray-300 dark:hover:bg-gray-650 group transition duration-150 ease-in-out h-full" href="/framework_v2/item">
+          
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            
+              <p class="leading-none text-lg font-regular">Item</p>
+              <p class="text-sm text-gray-550 dark:text-gray-500 flex-grow">Build standardized list items and content blocks</p>
+            
+          
+          
+            Next
+            
+  
+
+
+          
+</a>    
+  
+
+  
+    <a class="flex items-center text-gray-700 dark:text-gray-200 rounded-xl bg-gray-200 dark:bg-gray-700 p-2.5 hover:bg-gray-300 dark:hover:bg-gray-650 group transition duration-150 ease-in-out" href="/framework_v2">
+      
+        
+          
+            
+              
+            
+          
+          Framework Index
+        
+      
+</a>  
+
+
+
+
+    
+  
+
+
+      
+    
+
+    
+    
+      
+        
+    
+      <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2 mb-4">On this page</h3>
+      
+        
+        Loading table of contents...
+      
+    
+ 
+      
+    
+  
+  
+  
+  
+  <ul class="flex flex-row p-2 sm:p-2 sm:gap-2">
+    
+    
+      
+        
+      
+      Components
+    
+    
+      Components
+      
+    
+
+    
+    
+      
+        
+      
+      On This Page
+    
+    
+      On This Page
+      
+    
+  </ul>
+
+
+ 
+  
+  
+  
+  
+    
+      
+        
+          
+
+
+
+        
+      
+      
+        
+    
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Utilities</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/size">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Size
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/spacing">
+                  
+                    
+                      
+
+
+
+                    
+                    Spacing
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/gap">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Gap
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/flex">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Flex
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/grid">
+                  
+                    
+                      
+
+
+                    
+                    Grid
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/background">
+                  
+                    
+                      
+
+
+
+                    
+                    Background
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/border">
+                  
+                    
+                      
+
+
+
+
+                    
+                    Border
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/rounded">
+                  
+                    
+                      
+  
+
+
+                    
+                    Rounded
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/visibility">
+                  
+                    
+                      
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+  
+    
+      
+    
+  
+ 
+                    
+                    Visibility
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/responsive">
+                  
+                    
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+                    
+                    Responsive
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/text">
+                  
+                    
+                      
+
+
+
+
+
+                    
+                    Text
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/image">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Image
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/image_stroke">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Image Stroke
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/text_stroke">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Text Stroke
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/clamp">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Clamp
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/scale">
+                  
+                    
+                      
+  
+  
+  
+  
+ 
+                    
+                    Scale
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/aspect_ratio">
+                  
+                    
+                      
+  
+
+
+                    
+                    Aspect Ratio
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/responsive_test">
+                  
+                    
+                      
+  
+
+
+                    
+                    Responsive Test
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Base</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/screen">
+                  
+                    
+                      
+  
+ 
+                    
+                    Screen
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/view">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    View
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/layout">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Layout
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/title_bar">
+                  
+                    
+                      
+
+
+
+
+
+                    
+                    Title Bar
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/columns">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Columns
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/mashup">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Mashup
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Elements</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/title">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Title
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/label">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Label
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/description">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Description
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/divider">
+                  
+                    
+                      
+  
+
+
+                    
+                    Divider
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Components</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 font-medium" data-turbo="false" href="/framework_v2/rich_text">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Rich Text
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/item">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Item
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/table">
+                  
+                    
+                      
+
+
+                    
+                    Table
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/chart">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Chart
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/progress">
+                  
+                    
+                      
+  
+
+
+                    
+                    Progress
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Modulations</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/overflow">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Overflow
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/format_value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Format Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/fit_value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Fit Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/content_limiter">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Content Limiter
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/pixel_perfect">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Pixel Perfect
+                
+</a>              </li>
+          </ul>
+        
+    
+ 
+      
+    
+  
+  
+  
+  
+    
+      
+        
+          
+
+
+
+        
+      
+      
+        
+    
+      <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2 mb-4">On this page</h3>
+      
+        
+        Loading table of contents...
+      
+    
+ 
+      
+    
+  
+  
+  
+    </div>
+</body>
+</html>

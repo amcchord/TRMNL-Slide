@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View - TRMNL Framework</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 4px; overflow-x: auto; }
+        code { background: #f4f4f4; padding: 2px 4px; border-radius: 2px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .example { border: 1px solid #ddd; padding: 15px; margin: 15px 0; border-radius: 4px; }
+        h1 { color: #333; border-bottom: 2px solid #333; padding-bottom: 10px; }
+        h2 { color: #555; margin-top: 30px; }
+        h3 { color: #666; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>View</h1>
+    <main> <div> <div> <div> <div> <div> <h1>View</h1> </div> </div> </div> </div> <div> <p> The View system provides a consistent container structure for displaying content within the application. </p> <div> <section> <div> <div><a href="https://usetrmnl.com/framework_v2/view#base-structure">#</a><h3>Base Structure</h3></div> <p> The Layout element is the core component of every View, providing a consistent container for your content. Views can optionally include a Title Bar for additional context. </p> </div> <div> <div> <div><a href="https://usetrmnl.com/framework_v2/view#view-with-title-bar">#</a><h4>View with Title Bar</h4></div> <p> The <code>view view--full</code> classes create a full-width view. Also available are <code>view--half_horizontal, view--half_vertical, view--quadrant</code>.<br> </p> <p> When combined with a title bar, it provides context and navigation options. If you're building a screen in the markup editor, <em>you do not need to wrap your content</em> with the <code>view view--{{size}}</code> classes. The example code below is sufficient for any layout. </p> </div> <div> <div> <div> <div> <div> <div> <span>Layout</span> </div> <div> <img src="https://usetrmnl.com/images/plugins/trmnl--render.svg"> <span>Title</span> <span>Instance</span> </div> </div> </div> </div> </div> </div> <div> <div> <pre><code>&lt;div class="layout"&gt; &lt;!-- Your content here --&gt; &lt;/div&gt; &lt;div class="title_bar"&gt; &lt;img class="image" src="/images/plugins/trmnl--render.svg" /&gt; &lt;span class="title"&gt;Title&lt;/span&gt; &lt;span class="instance"&gt;Instance&lt;/span&gt; &lt;/div&gt;</code></pre> </div> </div> </div> <div> <div> <div><a href="https://usetrmnl.com/framework_v2/view#view-without-title-bar">#</a><h4>View without Title Bar</h4></div> <p> For simpler interfaces, you can create a view without a title bar using just the base view classes. </p> </div> <div> <div> <div> <div> <div> <div> <span>Layout</span> </div> </div> </div> </div> </div> </div> <div> <div> <pre><code>&lt;div class="layout"&gt; &lt;!-- Your content here --&gt; &lt;/div&gt;</code></pre> </div> </div> </div> </section> <section> <div> <div><a href="https://usetrmnl.com/framework_v2/view#screen-container-modifiers">#</a><h3>Screen Container Modifiers</h3></div> <p> The screen container that wraps your views has a no-bleed option that removes padding. This can be controlled through Private and Public Plugin settings, or applied directly in your code when developing locally. </p> </div> <div> <div> <div><a href="https://usetrmnl.com/framework_v2/view#no-bleed-modifier">#</a><h4>No Bleed Modifier</h4></div> <p> The <code>screen--no-bleed</code> modifier removes the default padding around the screen container, allowing content to extend fully to the edges. </p> </div> <div> <div> <div> <div> <div> <span>Screen No Bleed / Layout</span> </div> </div> </div> </div> </div> <div> <div> <pre><code>&lt;div class="screen screen--no-bleed"&gt; &lt;div class="view view--full"&gt; &lt;div class="layout"&gt; &lt;!-- Your content here --&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></pre> </div> </div> </div> </section> <div> <div> <div> <a href="/framework_v2/screen"> <div> <div> <p>Screen</p> <p>Device screen dimensions, orientation, and display properties</p> </div> </div> <span> Previous </span> </a> </div> <div> <a href="/framework_v2/layout"> <div> <div> <p>Layout</p> <p>Primary container for organizing plugin content</p> </div> </div> <span> Next </span> </a> </div> </div> <div> <a href="/framework_v2"> <div> <span> Framework Index </span> </div> </a> </div> </div> </div> </div> </div> </main>
+</body>
+</html>

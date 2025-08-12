@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRMNL Framework Documentation - Local Copy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+        }
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .doc-link {
+            display: block;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+        .doc-link:hover {
+            background: #e8e8e8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .doc-link strong {
+            display: block;
+            color: #0066cc;
+            margin-bottom: 5px;
+        }
+        .doc-link span {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .info {
+            background: #e8f4f8;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        .info h3 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+        .stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .stat {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #0066cc;
+        }
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>TRMNL Framework Documentation</h1>
+    
+    <div class="info">
+        <h3>Local Documentation Archive</h3>
+        <p>This is a local copy of the TRMNL Framework documentation from <a href="https://usetrmnl.com/framework_v2/" target="_blank">https://usetrmnl.com/framework_v2/</a></p>
+        <p>All pages have been converted to simplified HTML for offline reference and archival purposes.</p>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">39</div>
+                <div class="stat-label">Total Pages</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">5</div>
+                <div class="stat-label">Categories</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📐 Utilities</h2>
+        <div class="doc-grid">
+            <a href="size.html" class="doc-link">
+                <strong>Size</strong>
+                <span>Width and height dimensions control</span>
+            </a>
+            <a href="spacing.html" class="doc-link">
+                <strong>Spacing</strong>
+                <span>Margin and padding utilities</span>
+            </a>
+            <a href="gap.html" class="doc-link">
+                <strong>Gap</strong>
+                <span>Spacing between flex/grid items</span>
+            </a>
+            <a href="flex.html" class="doc-link">
+                <strong>Flex</strong>
+                <span>Flexible box layout utilities</span>
+            </a>
+            <a href="grid.html" class="doc-link">
+                <strong>Grid</strong>
+                <span>CSS Grid layout system</span>
+            </a>
+            <a href="background.html" class="doc-link">
+                <strong>Background</strong>
+                <span>Background color and styling</span>
+            </a>
+            <a href="border.html" class="doc-link">
+                <strong>Border</strong>
+                <span>Border styles and widths</span>
+            </a>
+            <a href="rounded.html" class="doc-link">
+                <strong>Rounded</strong>
+                <span>Border radius utilities</span>
+            </a>
+            <a href="visibility.html" class="doc-link">
+                <strong>Visibility</strong>
+                <span>Element visibility control</span>
+            </a>
+            <a href="responsive.html" class="doc-link">
+                <strong>Responsive</strong>
+                <span>Breakpoint-based styling</span>
+            </a>
+            <a href="text.html" class="doc-link">
+                <strong>Text</strong>
+                <span>Typography and text utilities</span>
+            </a>
+            <a href="image.html" class="doc-link">
+                <strong>Image</strong>
+                <span>Image display and sizing</span>
+            </a>
+            <a href="image-stroke.html" class="doc-link">
+                <strong>Image Stroke</strong>
+                <span>Image border effects</span>
+            </a>
+            <a href="text-stroke.html" class="doc-link">
+                <strong>Text Stroke</strong>
+                <span>Text outline effects</span>
+            </a>
+            <a href="clamp.html" class="doc-link">
+                <strong>Clamp</strong>
+                <span>Value range constraints</span>
+            </a>
+            <a href="scale.html" class="doc-link">
+                <strong>Scale</strong>
+                <span>Transform scale utilities</span>
+            </a>
+            <a href="aspect-ratio.html" class="doc-link">
+                <strong>Aspect Ratio</strong>
+                <span>Maintain element proportions</span>
+            </a>
+            <a href="responsive-test.html" class="doc-link">
+                <strong>Responsive Test</strong>
+                <span>Testing responsive layouts</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎨 Base</h2>
+        <div class="doc-grid">
+            <a href="screen.html" class="doc-link">
+                <strong>Screen</strong>
+                <span>Screen container component</span>
+            </a>
+            <a href="view.html" class="doc-link">
+                <strong>View</strong>
+                <span>View container utilities</span>
+            </a>
+            <a href="layout.html" class="doc-link">
+                <strong>Layout</strong>
+                <span>Page layout structures</span>
+            </a>
+            <a href="title-bar.html" class="doc-link">
+                <strong>Title Bar</strong>
+                <span>Header title components</span>
+            </a>
+            <a href="columns.html" class="doc-link">
+                <strong>Columns</strong>
+                <span>Column-based layouts</span>
+            </a>
+            <a href="mashup.html" class="doc-link">
+                <strong>Mashup</strong>
+                <span>Combined layout patterns</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🔤 Elements</h2>
+        <div class="doc-grid">
+            <a href="title.html" class="doc-link">
+                <strong>Title</strong>
+                <span>Title text elements</span>
+            </a>
+            <a href="value.html" class="doc-link">
+                <strong>Value</strong>
+                <span>Data value display</span>
+            </a>
+            <a href="label.html" class="doc-link">
+                <strong>Label</strong>
+                <span>Label text components</span>
+            </a>
+            <a href="description.html" class="doc-link">
+                <strong>Description</strong>
+                <span>Descriptive text blocks</span>
+            </a>
+            <a href="divider.html" class="doc-link">
+                <strong>Divider</strong>
+                <span>Content separation lines</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🧩 Components</h2>
+        <div class="doc-grid">
+            <a href="rich-text.html" class="doc-link">
+                <strong>Rich Text</strong>
+                <span>Formatted text content</span>
+            </a>
+            <a href="item.html" class="doc-link">
+                <strong>Item</strong>
+                <span>List item components</span>
+            </a>
+            <a href="table.html" class="doc-link">
+                <strong>Table</strong>
+                <span>Data table displays</span>
+            </a>
+            <a href="chart.html" class="doc-link">
+                <strong>Chart</strong>
+                <span>Data visualization charts</span>
+            </a>
+            <a href="progress.html" class="doc-link">
+                <strong>Progress</strong>
+                <span>Progress indicators</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>⚙️ Modulations</h2>
+        <div class="doc-grid">
+            <a href="overflow.html" class="doc-link">
+                <strong>Overflow</strong>
+                <span>Content overflow handling</span>
+            </a>
+            <a href="format-value.html" class="doc-link">
+                <strong>Format Value</strong>
+                <span>Value formatting utilities</span>
+            </a>
+            <a href="fit-value.html" class="doc-link">
+                <strong>Fit Value</strong>
+                <span>Content fitting strategies</span>
+            </a>
+            <a href="content-limiter.html" class="doc-link">
+                <strong>Content Limiter</strong>
+                <span>Content length constraints</span>
+            </a>
+            <a href="pixel-perfect.html" class="doc-link">
+                <strong>Pixel Perfect</strong>
+                <span>Precise pixel alignment</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="info" style="margin-top: 40px;">
+        <h3>Usage Notes</h3>
+        <ul>
+            <li>All documentation pages have been saved as simplified HTML files</li>
+            <li>Code examples and important styling information have been preserved</li>
+            <li>These pages can be viewed offline in any web browser</li>
+            <li>Original source: <a href="https://usetrmnl.com/framework_v2/" target="_blank">TRMNL Framework Documentation</a></li>
+        </ul>
+    </div>
+</body>
+</html>
