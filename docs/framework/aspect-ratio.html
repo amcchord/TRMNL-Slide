@@ -1,0 +1,4380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspect Ratio - TRMNL Framework</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 4px; overflow-x: auto; }
+        code { background: #f4f4f4; padding: 2px 4px; border-radius: 2px; }
+    </style>
+</head>
+<body>
+    <h1>Aspect Ratio</h1>
+    <div class="content">
+
+  
+
+  
+    
+      
+        
+          <a href="/framework_v2" class="inline-block flex items-center ml-1">
+              
+              
+            Framework
+          </a>
+        
+
+        
+        
+          
+            
+          
+        
+
+        
+        
+            
+
+    
+    
+    
+        
+                
+  
+ 
+                
+
+  
+ 
+                
+                
+        
+    
+    
+    
+    
+        
+                
+  
+ 
+                
+  
+ 
+                
+                
+        
+    
+    
+            
+    
+    
+    
+    Amazon Kindle 2024
+Amazon Kindle 7
+Amazon Kindle Oasis 2
+Amazon Kindle PW 6th Gen
+Amazon Kindle PW 7th Gen
+Inkplate 10
+Inky Impression 13.3
+Inky Impression 7.3
+Kobo Aura HD
+Kobo Aura One
+Kobo Libra 2
+TRMNL
+    
+    
+    1-bit
+2-bit
+4-bit
+    
+    
+    
+        
+                
+  
+ 
+        
+    
+
+            
+
+          
+          <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/blog">Blog</a>
+          <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/developers">Developers</a>
+
+            <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/login">Login</a>
+            <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/signup">Sign up</a>
+            <a href="/" class="ml-2 inline-block py-2 px-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-full transition-colors duration-200 text-sm tracking-tight">
+              Get TRMNL
+            </a>
+        
+      
+
+      
+      
+        
+          
+          
+            
+              
+                
+                  <a href="/" class="inline-block flex items-center">
+                      
+                      
+                    Framework Docs
+                  </a>
+                
+
+                
+                  
+                    
+                  
+                
+              
+            
+          
+
+          
+          
+            
+                
+
+    
+    
+    
+        
+                
+  
+ 
+                
+
+  
+ 
+                Light Mode
+                
+                
+        
+    
+    
+    
+    
+        
+                
+  
+ 
+                
+  
+ 
+                Landscape
+                
+                
+        
+    
+    
+            
+    
+    
+    
+    Amazon Kindle 2024
+Amazon Kindle 7
+Amazon Kindle Oasis 2
+Amazon Kindle PW 6th Gen
+Amazon Kindle PW 7th Gen
+Inkplate 10
+Inky Impression 13.3
+Inky Impression 7.3
+Kobo Aura HD
+Kobo Aura One
+Kobo Libra 2
+TRMNL
+    
+    
+    1-bit
+2-bit
+4-bit
+    
+    
+    
+        
+                
+  
+ 
+                Reset to Defaults
+        
+    
+
+                
+              
+              
+              <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/blog">Blog</a>
+              <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/developers">Developers</a>
+
+                <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/login">Login</a>
+                <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/signup">Sign up</a>
+                <a href="/" class="mt-2 inline-block py-2 px-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-full transition-colors duration-200 text-sm tracking-tight">
+                  Get TRMNL
+                </a>
+            
+          
+        
+      
+    
+  
+
+
+  
+
+ 
+
+  
+  
+    
+    
+      
+        
+    
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Utilities</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/size">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Size
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/spacing">
+                  
+                    
+                      
+
+
+
+                    
+                    Spacing
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/gap">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Gap
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/flex">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Flex
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/grid">
+                  
+                    
+                      
+
+
+                    
+                    Grid
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/background">
+                  
+                    
+                      
+
+
+
+                    
+                    Background
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/border">
+                  
+                    
+                      
+
+
+
+
+                    
+                    Border
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/rounded">
+                  
+                    
+                      
+  
+
+
+                    
+                    Rounded
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/visibility">
+                  
+                    
+                      
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+  
+    
+      
+    
+  
+ 
+                    
+                    Visibility
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/responsive">
+                  
+                    
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+                    
+                    Responsive
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/text">
+                  
+                    
+                      
+
+
+
+
+
+                    
+                    Text
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/image">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Image
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/image_stroke">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Image Stroke
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/text_stroke">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Text Stroke
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/clamp">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Clamp
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/scale">
+                  
+                    
+                      
+  
+  
+  
+  
+ 
+                    
+                    Scale
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 font-medium" data-turbo="false" href="/framework_v2/aspect_ratio">
+                  
+                    
+                      
+  
+
+
+                    
+                    Aspect Ratio
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/responsive_test">
+                  
+                    
+                      
+  
+
+
+                    
+                    Responsive Test
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Base</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/screen">
+                  
+                    
+                      
+  
+ 
+                    
+                    Screen
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/view">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    View
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/layout">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Layout
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/title_bar">
+                  
+                    
+                      
+
+
+
+
+
+                    
+                    Title Bar
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/columns">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Columns
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/mashup">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Mashup
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Elements</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/title">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Title
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/label">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Label
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/description">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Description
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/divider">
+                  
+                    
+                      
+  
+
+
+                    
+                    Divider
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Components</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/rich_text">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Rich Text
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/item">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Item
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/table">
+                  
+                    
+                      
+
+
+                    
+                    Table
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/chart">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Chart
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/progress">
+                  
+                    
+                      
+  
+
+
+                    
+                    Progress
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Modulations</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/overflow">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Overflow
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/format_value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Format Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/fit_value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Fit Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/content_limiter">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Content Limiter
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/pixel_perfect">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Pixel Perfect
+                
+</a>              </li>
+          </ul>
+        
+    
+ 
+      
+    
+
+    
+    
+      
+      
+        
+  
+    
+  
+  
+
+
+  
+  
+      <h1 class="font-heading tracking-tight font-medium text-gray-900 dark:text-white text-2xl md:text-3xl mb-0.5">Aspect Ratio</h1>
+    <p class="max-w-96 text-md md:text-lg text-gray-500 leading-tight md:leading-tight"></p>
+  
+
+
+
+
+  
+
+  
+    <p class="text-gray-600 dark:text-gray-400">
+      The Aspect Ratio utility uses the native CSS <code>aspect-ratio</code> property to maintain consistent proportions for elements.
+      Perfect for images, videos, and containers that need to maintain specific width-to-height ratios across different screen sizes.
+    </p>
+
+    
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/aspect_ratio#common-aspect-ratios" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="common-aspect-ratios" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Common Aspect Ratios</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            Use predefined aspect ratio classes to constrain element dimensions to specific proportions. 
+            These utilities apply the CSS <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">aspect-ratio</code> property directly to elements.
+          </p>
+        
+
+        
+          
+            <a href="https://usetrmnl.com/framework_v2/aspect_ratio#auto-aspect-ratio" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 0px">#</a><h4 id="auto-aspect-ratio" class="inline text-md font-medium text-gray-700 dark:text-gray-200 mb-2 ">Auto Aspect Ratio</h4>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Use <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">aspect--auto</code> to remove aspect ratio constraints
+              and let content determine the dimensions naturally.
+            </p>
+          
+
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          
+                            Auto (no constraints)
+                          
+                        
+                      
+                    
+
+                    
+                      
+                      Aspect Ratio
+                      Auto
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;div class="aspect--auto"&gt;
+  &lt;!-- Content determines dimensions --&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+
+          
+
+          
+            <a href="https://usetrmnl.com/framework_v2/aspect_ratio#square-ratio" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 0px">#</a><h4 id="square-ratio" class="inline text-md font-medium text-gray-700 dark:text-gray-200 mb-2 ">Square Ratio</h4>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Use <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">aspect--1/1</code> for perfect squares.
+              Ideal for profile pictures, thumbnails, and icon containers.
+            </p>
+          
+
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          1:1
+                        
+                      
+                      
+                        
+                          1:1
+                        
+                      
+                      
+                        
+                          1:1
+                        
+                      
+                    
+
+                    
+                      
+                      Aspect Ratio
+                      Square
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;div class="aspect--1/1"&gt;
+  &lt;img src="profile.jpg" /&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+
+          
+        
+      
+
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/aspect_ratio#landscape-ratios" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="landscape-ratios" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Landscape Ratios</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            Common landscape aspect ratios for horizontal content like videos, hero images, and media players.
+          </p>
+        
+
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          
+                            4:3 (Standard)
+                          
+                        
+                        
+                          
+                            3:2 (Classic)
+                          
+                        
+                        
+                          
+                            16:9 (Widescreen)
+                          
+                        
+                        
+                          
+                            21:9 (Ultra-wide)
+                          
+                        
+                      
+                    
+
+                    
+                      
+                      Aspect Ratio
+                      Landscape
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;!-- Standard TV/Monitor ratio --&gt;
+&lt;div class="aspect--4/3"&gt;
+  &lt;video src="video.mp4" /&gt;
+&lt;/div&gt;
+
+&lt;!-- Classic 35mm film --&gt;
+&lt;div class="aspect--3/2"&gt;
+  &lt;img src="photo.jpg" /&gt;
+&lt;/div&gt;
+
+&lt;!-- HD Video/Modern displays --&gt;
+&lt;div class="aspect--16/9"&gt;
+  &lt;iframe src="youtube.com/embed/..." /&gt;
+&lt;/div&gt;
+
+&lt;!-- Cinematic ultra-wide --&gt;
+&lt;div class="aspect--21/9"&gt;
+  &lt;video src="movie.mp4" /&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+
+          
+        
+      
+
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/aspect_ratio#portrait-ratios" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="portrait-ratios" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Portrait Ratios</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            Portrait aspect ratios for vertical content like mobile screens, story formats, and portrait photography.
+          </p>
+        
+
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          3:4
+                        
+                      
+                      
+                        
+                          2:3
+                        
+                      
+                      
+                        
+                          9:16
+                        
+                      
+                      
+                        
+                          9:21
+                        
+                      
+                    
+
+                    
+                      
+                      Aspect Ratio
+                      Portrait
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;!-- Vertical standard --&gt;
+&lt;div class="aspect--3/4"&gt;
+  &lt;img src="portrait.jpg" /&gt;
+&lt;/div&gt;
+
+&lt;!-- Vertical classic --&gt;
+&lt;div class="aspect--2/3"&gt;
+  &lt;img src="photo.jpg" /&gt;
+&lt;/div&gt;
+
+&lt;!-- Mobile/Story format --&gt;
+&lt;div class="aspect--9/16"&gt;
+  &lt;video src="story.mp4" /&gt;
+&lt;/div&gt;
+
+&lt;!-- Tall mobile format --&gt;
+&lt;div class="aspect--9/21"&gt;
+  &lt;img src="mobile-screenshot.png" /&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+
+          
+        
+      
+
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/aspect_ratio#responsive-aspect-ratios" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="responsive-aspect-ratios" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Responsive Aspect Ratios</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            Aspect ratio utilities support responsive variants, allowing you to change aspect ratios at different breakpoints.
+            This is useful for adapting content layout across devices.
+          </p>
+        
+
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          Responsive Aspect
+                        
+                      
+                    
+
+                    
+                      
+                      Aspect Ratio
+                      Responsive
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;!-- Square on mobile, widescreen on tablet, ultra-wide on desktop --&gt;
+&lt;div class="aspect--1/1 md:aspect--16/9 lg:aspect--21/9"&gt;
+  &lt;img src="responsive-image.jpg" /&gt;
+&lt;/div&gt;
+
+&lt;!-- Portrait on mobile, landscape on larger screens --&gt;
+&lt;div class="aspect--9/16 md:aspect--16/9"&gt;
+  &lt;video src="adaptive-video.mp4" /&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+
+          
+        
+      
+
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/aspect_ratio#working-with-images" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="working-with-images" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Working with Images</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            Aspect ratio utilities use the native CSS <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">aspect-ratio</code> property
+            to constrain element dimensions. Apply these classes directly to images or containers as needed.
+          </p>
+        
+
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          
+                          Direct on image
+                        
+                        
+                          
+                            
+                          
+                          Container approach
+                        
+                        
+                          
+                          Square aspect
+                        
+                      
+                    
+
+                    
+                      
+                      Aspect Ratio
+                      Image Usage
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;!-- Apply directly to image --&gt;
+&lt;img src="image.jpg" class="aspect--16/9 w--full image--cover" /&gt;
+
+&lt;!-- Use container for more control --&gt;
+&lt;div class="aspect--16/9 overflow-hidden"&gt;
+  &lt;img src="image.jpg" class="w--full h--full image--contain" /&gt;
+&lt;/div&gt;
+
+&lt;!-- Square aspect ratio --&gt;
+&lt;img src="image.jpg" class="aspect--1/1 w--full image--cover" /&gt;</code></pre>
+
+
+
+
+          
+        
+      
+
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/aspect_ratio#available-aspect-ratios" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 2px">#</a><h2 id="available-aspect-ratios" class="inline text-xl font-medium text-gray-900 dark:text-white mb-4 ">Available Aspect Ratios</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            Complete reference of all available aspect ratio utilities.
+          </p>
+        
+
+        
+          <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+            
+              <tr>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Class</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Ratio</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Common Use</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Responsive</th>
+              </tr>
+            
+            
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-mono">aspect--auto</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm">No constraints</td>
+                <td class="px-6 py-4 text-sm">Natural dimensions</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  
+                    â Yes
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-mono">aspect--1/1</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm">1:1</td>
+                <td class="px-6 py-4 text-sm">Square images, avatars</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  
+                    â Yes
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-mono">aspect--4/3</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm">4:3</td>
+                <td class="px-6 py-4 text-sm">Standard TV, presentations</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  
+                    â Yes
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-mono">aspect--3/2</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm">3:2</td>
+                <td class="px-6 py-4 text-sm">Classic 35mm photography</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  
+                    â Yes
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-mono">aspect--16/9</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm">16:9</td>
+                <td class="px-6 py-4 text-sm">HD video, YouTube</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  
+                    â Yes
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-mono">aspect--21/9</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm">21:9</td>
+                <td class="px-6 py-4 text-sm">Cinematic, ultra-wide displays</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  
+                    â Yes
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-mono">aspect--3/4</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm">3:4</td>
+                <td class="px-6 py-4 text-sm">Portrait standard</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  
+                    â Yes
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-mono">aspect--2/3</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm">2:3</td>
+                <td class="px-6 py-4 text-sm">Portrait photography</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  
+                    â Yes
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-mono">aspect--9/16</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm">9:16</td>
+                <td class="px-6 py-4 text-sm">Mobile screens, Stories</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  
+                    â Yes
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-mono">aspect--9/21</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm">9:21</td>
+                <td class="px-6 py-4 text-sm">Tall mobile format</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  
+                    â Yes
+                  
+                </td>
+              </tr>
+            
+          </table>
+        
+      
+
+      
+  
+    
+        <a class="w-full flex flex-col items-start space-y-4 text-gray-700 dark:text-gray-200 rounded-xl bg-gray-200 dark:bg-gray-700 p-4 hover:bg-gray-300 dark:hover:bg-gray-650 group transition duration-150 ease-in-out h-full" href="/framework_v2/scale">
+          
+            
+              
+  
+  
+  
+  
+ 
+            
+            
+              <p class="leading-none text-lg font-regular">Scale</p>
+              <p class="text-sm text-gray-550 dark:text-gray-500 flex-grow">Scale interface to affect content density and readability</p>
+            
+          
+          
+            
+  
+
+            Previous
+          
+</a>    
+
+    
+        <a class="w-full flex flex-col items-end space-y-4 text-gray-700 dark:text-gray-200 rounded-xl bg-gray-200 dark:bg-gray-700 p-4 hover:bg-gray-300 dark:hover:bg-gray-650 group transition duration-150 ease-in-out h-full" href="/framework_v2/responsive_test">
+          
+            
+              
+  
+
+
+            
+            
+              <p class="leading-none text-lg font-regular">Responsive Test</p>
+              <p class="text-sm text-gray-550 dark:text-gray-500 flex-grow">Test responsive utilities and compare SCSS mixins with CSS classes</p>
+            
+          
+          
+            Next
+            
+  
+
+
+          
+</a>    
+  
+
+  
+    <a class="flex items-center text-gray-700 dark:text-gray-200 rounded-xl bg-gray-200 dark:bg-gray-700 p-2.5 hover:bg-gray-300 dark:hover:bg-gray-650 group transition duration-150 ease-in-out" href="/framework_v2">
+      
+        
+          
+            
+              
+            
+          
+          Framework Index
+        
+      
+</a>  
+
+
+
+
+    
+  
+ 
+      
+    
+
+    
+    
+      
+        
+    
+      <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2 mb-4">On this page</h3>
+      
+        
+        Loading table of contents...
+      
+    
+ 
+      
+    
+  
+  
+  
+  
+  <ul class="flex flex-row p-2 sm:p-2 sm:gap-2">
+    
+    
+      
+        
+      
+      Components
+    
+    
+      Components
+      
+    
+
+    
+    
+      
+        
+      
+      On This Page
+    
+    
+      On This Page
+      
+    
+  </ul>
+
+
+ 
+  
+  
+  
+  
+    
+      
+        
+          
+
+
+
+        
+      
+      
+        
+    
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Utilities</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/size">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Size
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/spacing">
+                  
+                    
+                      
+
+
+
+                    
+                    Spacing
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/gap">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Gap
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/flex">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Flex
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/grid">
+                  
+                    
+                      
+
+
+                    
+                    Grid
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/background">
+                  
+                    
+                      
+
+
+
+                    
+                    Background
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/border">
+                  
+                    
+                      
+
+
+
+
+                    
+                    Border
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/rounded">
+                  
+                    
+                      
+  
+
+
+                    
+                    Rounded
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/visibility">
+                  
+                    
+                      
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+  
+    
+      
+    
+  
+ 
+                    
+                    Visibility
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/responsive">
+                  
+                    
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+                    
+                    Responsive
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/text">
+                  
+                    
+                      
+
+
+
+
+
+                    
+                    Text
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/image">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Image
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/image_stroke">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Image Stroke
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/text_stroke">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Text Stroke
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/clamp">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Clamp
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/scale">
+                  
+                    
+                      
+  
+  
+  
+  
+ 
+                    
+                    Scale
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 font-medium" data-turbo="false" href="/framework_v2/aspect_ratio">
+                  
+                    
+                      
+  
+
+
+                    
+                    Aspect Ratio
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/responsive_test">
+                  
+                    
+                      
+  
+
+
+                    
+                    Responsive Test
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Base</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/screen">
+                  
+                    
+                      
+  
+ 
+                    
+                    Screen
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/view">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    View
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/layout">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Layout
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/title_bar">
+                  
+                    
+                      
+
+
+
+
+
+                    
+                    Title Bar
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/columns">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Columns
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/mashup">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Mashup
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Elements</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/title">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Title
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/label">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Label
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/description">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Description
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/divider">
+                  
+                    
+                      
+  
+
+
+                    
+                    Divider
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Components</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/rich_text">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Rich Text
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/item">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Item
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/table">
+                  
+                    
+                      
+
+
+                    
+                    Table
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/chart">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Chart
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/progress">
+                  
+                    
+                      
+  
+
+
+                    
+                    Progress
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Modulations</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/overflow">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Overflow
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/format_value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Format Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/fit_value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Fit Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/content_limiter">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Content Limiter
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/pixel_perfect">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Pixel Perfect
+                
+</a>              </li>
+          </ul>
+        
+    
+ 
+      
+    
+  
+  
+  
+  
+    
+      
+        
+          
+
+
+
+        
+      
+      
+        
+    
+      <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2 mb-4">On this page</h3>
+      
+        
+        Loading table of contents...
+      
+    
+ 
+      
+    
+  
+  
+  
+    </div>
+</body>
+</html>

@@ -1,0 +1,4104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Limiter - TRMNL Framework</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 4px; overflow-x: auto; }
+        code { background: #f4f4f4; padding: 2px 4px; border-radius: 2px; }
+    </style>
+</head>
+<body>
+    <h1>Content Limiter</h1>
+    <div class="content">
+
+  
+
+  
+    
+      
+        
+          <a href="/framework_v2" class="inline-block flex items-center ml-1">
+              
+              
+            Framework
+          </a>
+        
+
+        
+        
+          
+            
+          
+        
+
+        
+        
+            
+
+    
+    
+    
+        
+                
+  
+ 
+                
+
+  
+ 
+                
+                
+        
+    
+    
+    
+    
+        
+                
+  
+ 
+                
+  
+ 
+                
+                
+        
+    
+    
+            
+    
+    
+    
+    Amazon Kindle 2024
+Amazon Kindle 7
+Amazon Kindle Oasis 2
+Amazon Kindle PW 6th Gen
+Amazon Kindle PW 7th Gen
+Inkplate 10
+Inky Impression 13.3
+Inky Impression 7.3
+Kobo Aura HD
+Kobo Aura One
+Kobo Libra 2
+TRMNL
+    
+    
+    1-bit
+2-bit
+4-bit
+    
+    
+    
+        
+                
+  
+ 
+        
+    
+
+            
+
+          
+          <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/blog">Blog</a>
+          <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/developers">Developers</a>
+
+            <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/login">Login</a>
+            <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/signup">Sign up</a>
+            <a href="/" class="ml-2 inline-block py-2 px-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-full transition-colors duration-200 text-sm tracking-tight">
+              Get TRMNL
+            </a>
+        
+      
+
+      
+      
+        
+          
+          
+            
+              
+                
+                  <a href="/" class="inline-block flex items-center">
+                      
+                      
+                    Framework Docs
+                  </a>
+                
+
+                
+                  
+                    
+                  
+                
+              
+            
+          
+
+          
+          
+            
+                
+
+    
+    
+    
+        
+                
+  
+ 
+                
+
+  
+ 
+                Light Mode
+                
+                
+        
+    
+    
+    
+    
+        
+                
+  
+ 
+                
+  
+ 
+                Landscape
+                
+                
+        
+    
+    
+            
+    
+    
+    
+    Amazon Kindle 2024
+Amazon Kindle 7
+Amazon Kindle Oasis 2
+Amazon Kindle PW 6th Gen
+Amazon Kindle PW 7th Gen
+Inkplate 10
+Inky Impression 13.3
+Inky Impression 7.3
+Kobo Aura HD
+Kobo Aura One
+Kobo Libra 2
+TRMNL
+    
+    
+    1-bit
+2-bit
+4-bit
+    
+    
+    
+        
+                
+  
+ 
+                Reset to Defaults
+        
+    
+
+                
+              
+              
+              <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/blog">Blog</a>
+              <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/developers">Developers</a>
+
+                <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/login">Login</a>
+                <a class="inline-block py-2 px-3 transition-all duration-200 text-sm font-medium tracking-tight rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white text-black dark:text-white" href="/signup">Sign up</a>
+                <a href="/" class="mt-2 inline-block py-2 px-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-full transition-colors duration-200 text-sm tracking-tight">
+                  Get TRMNL
+                </a>
+            
+          
+        
+      
+    
+  
+
+
+  
+
+ 
+
+  
+  
+    
+    
+      
+        
+    
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Utilities</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/size">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Size
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/spacing">
+                  
+                    
+                      
+
+
+
+                    
+                    Spacing
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/gap">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Gap
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/flex">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Flex
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/grid">
+                  
+                    
+                      
+
+
+                    
+                    Grid
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/background">
+                  
+                    
+                      
+
+
+
+                    
+                    Background
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/border">
+                  
+                    
+                      
+
+
+
+
+                    
+                    Border
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/rounded">
+                  
+                    
+                      
+  
+
+
+                    
+                    Rounded
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/visibility">
+                  
+                    
+                      
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+  
+    
+      
+    
+  
+ 
+                    
+                    Visibility
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/responsive">
+                  
+                    
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+                    
+                    Responsive
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/text">
+                  
+                    
+                      
+
+
+
+
+
+                    
+                    Text
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/image">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Image
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/image_stroke">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Image Stroke
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/text_stroke">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Text Stroke
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/clamp">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Clamp
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/scale">
+                  
+                    
+                      
+  
+  
+  
+  
+ 
+                    
+                    Scale
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/aspect_ratio">
+                  
+                    
+                      
+  
+
+
+                    
+                    Aspect Ratio
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/responsive_test">
+                  
+                    
+                      
+  
+
+
+                    
+                    Responsive Test
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Base</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/screen">
+                  
+                    
+                      
+  
+ 
+                    
+                    Screen
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/view">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    View
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/layout">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Layout
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/title_bar">
+                  
+                    
+                      
+
+
+
+
+
+                    
+                    Title Bar
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/columns">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Columns
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/mashup">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Mashup
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Elements</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/title">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Title
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/label">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Label
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/description">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Description
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/divider">
+                  
+                    
+                      
+  
+
+
+                    
+                    Divider
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Components</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/rich_text">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Rich Text
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/item">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Item
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/table">
+                  
+                    
+                      
+
+
+                    
+                    Table
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/chart">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Chart
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/progress">
+                  
+                    
+                      
+  
+
+
+                    
+                    Progress
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Modulations</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/overflow">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Overflow
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/format_value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Format Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/fit_value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Fit Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 font-medium" data-turbo="false" href="/framework_v2/content_limiter">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Content Limiter
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/pixel_perfect">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Pixel Perfect
+                
+</a>              </li>
+          </ul>
+        
+    
+ 
+      
+    
+
+    
+    
+      
+      
+        
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+      <h1 class="font-heading tracking-tight font-medium text-gray-900 dark:text-white text-2xl md:text-3xl mb-0.5">Content Limiter</h1>
+    <p class="max-w-96 text-md md:text-lg text-gray-500 leading-tight md:leading-tight"></p>
+  
+
+
+
+
+  
+
+  
+    <p class="text-gray-600 dark:text-gray-400">
+      The Content Limiter system automatically restricts the height of content areas based on the view type, ensuring consistent layouts.
+      When content exceeds the height threshold, it adds a class that makes text smaller, but content might still overflow.
+      It should be used together with the Content component for proper formatting.
+    </p>
+
+    
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/content_limiter#basic-usage" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="basic-usage" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Basic Usage</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            To enable automatic content limiting, add the <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">data-content-limiter="true"</code>
+            attribute to your content element.
+          </p>
+        
+
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          
+                            Long Content Example
+                            
+                              <p class="">
+                                Contrary to what one might think, the Lorem ipsum text, despite being meaningless, has noble origins.
+                                
+                                
+                                Objectively composed of unrelated words, Lorem ipsum owes its existence to Marco Tullio Cicerone and to some steps of his De finibus bonorum et malorum (The highest good and the highest evil) written in 45 BC, a classic of Latin literature dating back more than 2000 years ago.
+                                
+                                
+                                The discovery was made by Richard McClintock , a professor of Latin at Hampden-Sydney College in Virginia, who faced the impetuous recurrence of the dark word consectetur in the text Lorem ipsum researched its origins to identify them in sections 1.10.32 and 1.10.33 of the aforementioned Cicero's philosophical work.
+                                
+                                
+                                The words taken from one of the dialogues contained in the De finibus are therefore the pieces of the most famous nonsensical text in the world.
+                                
+                                
+                                A discovery that has given greater importance to the Lorem ipsum which has remained on the crest of the wave since 500, that is when, according to Professor Richard McClintock, its use spread among the printers of the time.
+                                
+                                
+                                Of course we know that to make it known to most was a publicity of the Sixties, that of the transferable Letraset character sheets: transparent adhesive sheets on which the Lorem ipsum text was imprinted easily transferable on the editorial products before the advent of the computer.
+                              </p>
+                            
+                          
+                        
+                      
+                    
+                    
+                      
+                      Content Limiter
+                      Text Exceeding Threshold
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          Short Content Example
+                          
+                            <p class="">
+                              Contrary to what one might think, the Lorem ipsum text, despite being meaningless, has noble origins.
+                              
+                              
+                              Objectively composed of unrelated words, Lorem ipsum owes its existence to Marco Tullio Cicerone and to some steps of his De finibus bonorum et malorum (The highest good and the highest evil) written in 45 BC, a classic of Latin literature dating back more than 2000 years ago.
+                              
+                              
+                              The discovery was made by Richard McClintock , a professor of Latin at Hampden-Sydney College in Virginia, who faced the impetuous recurrence of the dark word consectetur in the text Lorem ipsum researched its origins to identify them in sections 1.10.32 and 1.10.33 of the aforementioned Cicero's philosophical work.
+                            </p>
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                    Content Limiter
+                    Text Within Threshold
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;div class="content" data-content-limiter="true"&gt;
+  &lt;p&gt;Contrary to what one might think, the Lorem ipsum text, despite being meaningless, has noble...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+
+          
+
+          
+            <p class="text-gray-600 dark:text-gray-400 mb-8">
+              When content exceeds the height threshold (which varies by view type), it will add the <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">content--small</code> class to make text smaller.
+              Note that this does not automatically truncate overflowing text. For text truncation with ellipsis, use the <a class="underline" href="/framework_v2/clamp">Clamp</a> component.
+            </p>
+          
+        
+      
+
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/content_limiter#custom-height-threshold" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="custom-height-threshold" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Custom Height Threshold</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            You can specify a custom maximum height using the <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">data-content-max-height</code> attribute.
+          </p>
+        
+
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        
+                          
+                            Custom Height Example
+                            
+                              <p>
+                                Contrary to what one might think, the Lorem ipsum text, despite being meaningless, has noble origins.
+                                
+                                
+                                Objectively composed of unrelated words, Lorem ipsum owes its existence to Marco Tullio Cicerone and to some steps of his De finibus bonorum et malorum (The highest good and the highest evil) written in 45 BC, a classic of Latin literature dating back more than 2000 years ago.
+                              </p>
+                            
+                          
+                          
+                            Custom Height Example
+                            
+                              <p>
+                                Contrary to what one might think, the Lorem ipsum text, despite being meaningless, has noble origins.
+                                
+                                
+                                Objectively composed of unrelated words, Lorem ipsum owes its existence to Marco Tullio Cicerone and to some steps of his De finibus bonorum et malorum (The highest good and the highest evil) written in 45 BC, a classic of Latin literature dating back more than 2000 years ago.
+                              </p>
+                            
+                          
+                        
+                      
+                    
+                    
+                      
+                      Content Limiter
+                      Custom Max Height: 140px
+                    
+                  
+                
+              
+            
+          
+
+          
+            
+	
+		
+			
+				Copy
+			
+			
+				Copied
+				
+					
+				
+			
+		
+		
+			
+				Show more
+				
+					
+				
+			
+			
+				Show less
+				
+					
+				
+			
+		
+	
+	<pre class="leading-tight"><code class="language-html text-gray-600 dark:text-gray-500 text-xs">&lt;div class="content" data-content-limiter="true" data-content-max-height="140"&gt;
+  &lt;p&gt;Contrary to what one might think, the Lorem ipsum text, despite being meaningless, has noble...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="content" data-content-limiter="true" data-content-max-height="140"&gt;
+  &lt;p&gt;Contrary to what one might think, the Lorem ipsum text, despite being meaningless, has noble...&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+
+
+          
+        
+      
+
+      
+        
+          <a href="https://usetrmnl.com/framework_v2/content_limiter#default-height-thresholds" class="inline hidden group-hover:block text-primary-500 cursor-pointer" style="position: absolute; left: -16px; padding-right: 8px; top: 1px">#</a><h3 id="default-height-thresholds" class="inline text-lg font-medium text-gray-800 dark:text-gray-100 mb-3 ">Default Height Thresholds</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-8">
+            If no custom height is specified, Content Limiter uses the following default thresholds based on view type:
+          </p>
+        
+
+        
+          
+            
+              <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">view--full</code>
+              400px
+            
+            
+              <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">view--half_vertical</code>
+              400px
+            
+            
+              <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">view--quadrant</code>
+              160px
+            
+            
+              <code class="text-sm text-gray-550 dark:text-gray-500 bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded">view--half_horizontal</code>
+              160px
+            
+          
+        
+      
+
+      
+  
+    
+        <a class="w-full flex flex-col items-start space-y-4 text-gray-700 dark:text-gray-200 rounded-xl bg-gray-200 dark:bg-gray-700 p-4 hover:bg-gray-300 dark:hover:bg-gray-650 group transition duration-150 ease-in-out h-full" href="/framework_v2/fit_value">
+          
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            
+              <p class="leading-none text-lg font-regular">Fit Value</p>
+              <p class="text-sm text-gray-550 dark:text-gray-500 flex-grow">Automatically resize numbers and values to fit within their containers</p>
+            
+          
+          
+            
+  
+
+            Previous
+          
+</a>    
+
+    
+        <a class="w-full flex flex-col items-end space-y-4 text-gray-700 dark:text-gray-200 rounded-xl bg-gray-200 dark:bg-gray-700 p-4 hover:bg-gray-300 dark:hover:bg-gray-650 group transition duration-150 ease-in-out h-full" href="/framework_v2/pixel_perfect">
+          
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            
+              <p class="leading-none text-lg font-regular">Pixel Perfect</p>
+              <p class="text-sm text-gray-550 dark:text-gray-500 flex-grow">Ensure text renders with crisp edges by aligning to the pixel grid</p>
+            
+          
+          
+            Next
+            
+  
+
+
+          
+</a>    
+  
+
+  
+    <a class="flex items-center text-gray-700 dark:text-gray-200 rounded-xl bg-gray-200 dark:bg-gray-700 p-2.5 hover:bg-gray-300 dark:hover:bg-gray-650 group transition duration-150 ease-in-out" href="/framework_v2">
+      
+        
+          
+            
+              
+            
+          
+          Framework Index
+        
+      
+</a>  
+
+
+
+
+    
+  
+
+
+      
+    
+
+    
+    
+      
+        
+    
+      <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2 mb-4">On this page</h3>
+      
+        
+        Loading table of contents...
+      
+    
+ 
+      
+    
+  
+  
+  
+  
+  <ul class="flex flex-row p-2 sm:p-2 sm:gap-2">
+    
+    
+      
+        
+      
+      Components
+    
+    
+      Components
+      
+    
+
+    
+    
+      
+        
+      
+      On This Page
+    
+    
+      On This Page
+      
+    
+  </ul>
+
+
+ 
+  
+  
+  
+  
+    
+      
+        
+          
+
+
+
+        
+      
+      
+        
+    
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Utilities</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/size">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Size
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/spacing">
+                  
+                    
+                      
+
+
+
+                    
+                    Spacing
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/gap">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Gap
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/flex">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Flex
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/grid">
+                  
+                    
+                      
+
+
+                    
+                    Grid
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/background">
+                  
+                    
+                      
+
+
+
+                    
+                    Background
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/border">
+                  
+                    
+                      
+
+
+
+
+                    
+                    Border
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/rounded">
+                  
+                    
+                      
+  
+
+
+                    
+                    Rounded
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/visibility">
+                  
+                    
+                      
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+  
+    
+      
+    
+  
+ 
+                    
+                    Visibility
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/responsive">
+                  
+                    
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+                    
+                    Responsive
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/text">
+                  
+                    
+                      
+
+
+
+
+
+                    
+                    Text
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/image">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Image
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/image_stroke">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Image Stroke
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/text_stroke">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Text Stroke
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/clamp">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Clamp
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/scale">
+                  
+                    
+                      
+  
+  
+  
+  
+ 
+                    
+                    Scale
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/aspect_ratio">
+                  
+                    
+                      
+  
+
+
+                    
+                    Aspect Ratio
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/responsive_test">
+                  
+                    
+                      
+  
+
+
+                    
+                    Responsive Test
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Base</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/screen">
+                  
+                    
+                      
+  
+ 
+                    
+                    Screen
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/view">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    View
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/layout">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Layout
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/title_bar">
+                  
+                    
+                      
+
+
+
+
+
+                    
+                    Title Bar
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/columns">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Columns
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/mashup">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Mashup
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Elements</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/title">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Title
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/label">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Label
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/description">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Description
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/divider">
+                  
+                    
+                      
+  
+
+
+                    
+                    Divider
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Components</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/rich_text">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Rich Text
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/item">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Item
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/table">
+                  
+                    
+                      
+
+
+                    
+                    Table
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/chart">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Chart
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/progress">
+                  
+                    
+                      
+  
+
+
+                    
+                    Progress
+                
+</a>              </li>
+          </ul>
+        
+        
+          <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2">Modulations</h3>
+          <ul class="space-y-1">
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/overflow">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Overflow
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/format_value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Format Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/fit_value">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Fit Value
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 font-medium" data-turbo="false" href="/framework_v2/content_limiter">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Content Limiter
+                
+</a>              </li>
+              <li>
+                <a class="block px-2 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800" data-turbo="false" href="/framework_v2/pixel_perfect">
+                  
+                    
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    Pixel Perfect
+                
+</a>              </li>
+          </ul>
+        
+    
+ 
+      
+    
+  
+  
+  
+  
+    
+      
+        
+          
+
+
+
+        
+      
+      
+        
+    
+      <h3 class="text-xs font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider px-2 mb-4">On this page</h3>
+      
+        
+        Loading table of contents...
+      
+    
+ 
+      
+    
+  
+  
+  
+    </div>
+</body>
+</html>
