@@ -32,6 +32,20 @@ This directory provides two ways to show Slide backup data on TRMNL devices:
 - Use `https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST&client_filter=ClientName`.
 - Accepts the same parameters as the JSON endpoint and renders a complete TRMNL-styled view with chart/alerts.
 
+#### Option C: TRMNL Screenshot plugin
+
+1. Navigate to **Plugins > Screenshot** in your TRMNL dashboard.
+2. Enter the URL: `https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST&client_filter=ClientName`
+   - Replace `YOUR_API_KEY` with your actual Slide API key
+   - Adjust `timezone` and `client_filter` parameters as needed
+3. The screenshot plugin will capture the rendered dashboard at 800x480 resolution.
+4. Set your desired refresh interval (recommended: ≥ 60 seconds to avoid API rate limits).
+
+**Screenshot plugin notes:**
+- The dashboard is optimized for TRMNL's 800x480 display resolution
+- All styling uses absolute URLs and should render correctly in the screenshot service
+- No authentication headers are required since the API key is passed as a URL parameter
+
 ---
 
 ### Parameters
@@ -66,6 +80,13 @@ curl -X POST https://www.slide.recipes/trmnl/json.php \
 
 ```text
 https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST&client_filter=ClientName
+```
+
+#### TRMNL Screenshot plugin
+
+```text
+Plugin: Screenshot
+URL: https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST&client_filter=ClientName
 ```
 
 ---
@@ -118,10 +139,17 @@ https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST&clie
 
 ### TRMNL setup checklist
 
+**Option A: Data source + Liquid template (recommended)**
 - Data URL: `https://www.slide.recipes/trmnl/json.php`
 - Template: upload `liquid.html`
 - Refresh interval: as desired (recommend ≥ 60s)
 - Parameters: set via GET on the URL or JSON POST
+
+**Option C: Screenshot plugin**
+- Plugin: Screenshot
+- URL: `https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST&client_filter=ClientName`
+- Refresh interval: ≥ 60 seconds (to avoid API rate limits)
+- No additional headers required
 
 ---
 
