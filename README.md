@@ -5,6 +5,10 @@ This directory provides two ways to show Slide backup data on TRMNL devices:
 - JSON endpoint + Liquid template (recommended for TRMNL widgets)
 - A server-rendered dashboard for quick previews or TRMNL web views
 
+![Sample Dashboard](screenshot.png)
+
+*Sample dashboard showing backup statistics, agent status, storage usage, and 24-hour activity chart*
+
 ### Files
 
 - `index.php` – Server-rendered TRMNL-styled dashboard (accepts the same parameters as the JSON endpoint)
