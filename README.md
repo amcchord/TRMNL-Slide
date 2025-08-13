@@ -25,20 +25,9 @@ This directory provides two ways to show Slide backup data on TRMNL devices:
 
 ### Integration options
 
-#### Option A: TRMNL data source + Liquid template (recommended)
+#### Option A: TRMNL Screenshot plugin
 
-1. Set the data URL to `https://www.slide.recipes/trmnl/json.php`.
-2. Provide parameters via GET or POST JSON (see below).
-3. Upload `liquid.html` as the template. It expects the `data` object returned by `json.php`.
-
-#### Option B: Direct web view (preview-only or TRMNL web URL)
-
-- Use `https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST&client_filter=ClientName`.
-- Accepts the same parameters as the JSON endpoint and renders a complete TRMNL-styled view with chart/alerts.
-
-#### Option C: TRMNL Screenshot plugin
-
-1. Navigate to **Plugins > Screenshot** in your TRMNL dashboard.
+1. Navigate to **Plugins > Screenshot** in your TRMNL dashboard ([see TRMNL Screenshot plugin documentation](https://help.usetrmnl.com/en/articles/10302121-screenshot)).
 2. Enter the URL: `https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST&client_filter=ClientName`
    - Replace `YOUR_API_KEY` with your actual Slide API key
    - Adjust `timezone` and `client_filter` parameters as needed
@@ -49,6 +38,18 @@ This directory provides two ways to show Slide backup data on TRMNL devices:
 - The dashboard is optimized for TRMNL's 800x480 display resolution
 - All styling uses absolute URLs and should render correctly in the screenshot service
 - No authentication headers are required since the API key is passed as a URL parameter
+- For more details, see the [TRMNL Screenshot plugin documentation](https://help.usetrmnl.com/en/articles/10302121-screenshot)
+
+#### Option B: TRMNL data source + Liquid template
+
+1. Set the data URL to `https://www.slide.recipes/trmnl/json.php`.
+2. Provide parameters via GET or POST JSON (see below).
+3. Upload `liquid.html` as the template. It expects the `data` object returned by `json.php`.
+
+#### Option C: Direct web view (preview-only or TRMNL web URL)
+
+- Use `https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST&client_filter=ClientName`.
+- Accepts the same parameters as the JSON endpoint and renders a complete TRMNL-styled view with chart/alerts.
 
 ---
 
@@ -65,6 +66,14 @@ Allowed timezone values map to: `EST → America/New_York`, `CST → America/Chi
 ---
 
 ### Example requests
+
+#### TRMNL Screenshot plugin
+
+```text
+Plugin: Screenshot
+URL: https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST&client_filter=ClientName
+Documentation: https://help.usetrmnl.com/en/articles/10302121-screenshot
+```
 
 #### GET (JSON endpoint)
 
@@ -84,13 +93,6 @@ curl -X POST https://www.slide.recipes/trmnl/json.php \
 
 ```text
 https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST&client_filter=ClientName
-```
-
-#### TRMNL Screenshot plugin
-
-```text
-Plugin: Screenshot
-URL: https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST&client_filter=ClientName
 ```
 
 ---
@@ -143,17 +145,18 @@ URL: https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST
 
 ### TRMNL setup checklist
 
-**Option A: Data source + Liquid template (recommended)**
-- Data URL: `https://www.slide.recipes/trmnl/json.php`
-- Template: upload `liquid.html`
-- Refresh interval: as desired (recommend ≥ 60s)
-- Parameters: set via GET on the URL or JSON POST
-
-**Option C: Screenshot plugin**
+**Option A: Screenshot plugin**
 - Plugin: Screenshot
 - URL: `https://www.slide.recipes/trmnl/index.php?api_key=YOUR_API_KEY&timezone=EST&client_filter=ClientName`
 - Refresh interval: ≥ 60 seconds (to avoid API rate limits)
 - No additional headers required
+- Documentation: [TRMNL Screenshot plugin guide](https://help.usetrmnl.com/en/articles/10302121-screenshot)
+
+**Option B: Data source + Liquid template**
+- Data URL: `https://www.slide.recipes/trmnl/json.php`
+- Template: upload `liquid.html`
+- Refresh interval: as desired (recommend ≥ 60s)
+- Parameters: set via GET on the URL or JSON POST
 
 ---
 
