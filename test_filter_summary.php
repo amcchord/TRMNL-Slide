@@ -2,7 +2,9 @@
 // Quick test to demonstrate client filtering is working
 require_once 'api.php';
 
-$apiKey = 'tk_fhcg0cx3xf4r_qYkFo8Is4taF54p8Vkz8GRR54iePFJ5K';
+$apiKey = getenv('SLIDE_API_KEY');
+if (!$apiKey) { fwrite(STDERR, "Set SLIDE_API_KEY to run this integration test.
+"); exit(1); }
 $api = new SlideAPI($apiKey);
 
 echo "Client Filter Test Summary\n";

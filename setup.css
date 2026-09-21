@@ -1,0 +1,83 @@
+@font-face {
+  font-family: Archivo;
+  src: url("/assets/fonts/Archivo-Variable.ttf");
+  font-weight: 100 900;
+  font-display: swap;
+}
+.trmnl-setup {
+  font:
+    14px/1.6 Archivo,
+    system-ui,
+    sans-serif;
+  width: min(500px, 100% - 32px);
+  margin: 60px auto;
+  padding: 32px;
+  border: 1px solid #e3e8f0;
+  border-radius: 12px;
+  background: #fff;
+  color: #151827;
+}
+.trmnl-setup h1 {
+  font-size: 26px;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  margin: 24px 0 8px;
+}
+.trmnl-setup p {
+  color: #667085;
+  margin: 0 0 24px;
+}
+.trmnl-setup a {
+  color: #2a3ba0;
+  font-size: 12px;
+}
+.trmnl-setup label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 16px 0 8px;
+}
+.trmnl-setup input {
+  width: 100%;
+  border: 1px solid #e3e8f0;
+  border-radius: 8px;
+  min-height: 42px;
+  padding: 10px;
+  font: inherit;
+  background: #f6f8fb;
+}
+.trmnl-setup button {
+  font:
+    600 13px Archivo,
+    system-ui,
+    sans-serif;
+  background: #2a3ba0;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-top: 24px;
+  cursor: pointer;
+}
+.trmnl-setup input:focus-visible,
+.trmnl-setup button:focus-visible {
+  outline: 3px solid #2ab4e5;
+  outline-offset: 2px;
+}
+html:has(.trmnl-setup),
+body:has(.trmnl-setup) {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  margin: 0;
+  background: #f5f7fb !important;
+}
+body:has(.trmnl-setup) .screen,
+body:has(.trmnl-setup) .view,
+body:has(.trmnl-setup) .layout {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100vh;
+  background: #f5f7fb;
+  display: flow-root;
+}
