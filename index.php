@@ -5,9 +5,7 @@ header('Cache-Control: post-check=0, pre-check=0', false);
 header('Pragma: no-cache');
 header('Expires: 0');
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    error_log('POST data: ' . print_r($_POST, true));
-}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -124,6 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border-radius: 10px;
         }
     </style>
+<link rel="stylesheet" href="/trmnl/setup.css">
 </head>
 <body class="environment trmnl">
     <div class="screen">
@@ -153,23 +152,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ?>
             <div class="view view--full">
                 <div class="layout">
-                        <h1 class="title">Slide Backup Dashboard Requires and API Key</h1>
+                        <div class="trmnl-setup"><a href="/index.php">← Recipes workspace</a><h1>TRMNL display</h1><p>A quiet, glanceable view of your backup fleet for your e-ink screen.</p><form method="post"><label for="trmnl-key">Slide API key</label><input type="password" name="api_key" id="trmnl-key" required autocomplete="off" placeholder="tk_…"><label for="trmnl-client">Client name filter (optional)</label><input name="client_filter" id="trmnl-client" placeholder="All clients"><button type="submit">Preview display →</button></form></div>
                 </div>
             </div>
             <?php
         } else {
-            // Log API key, timezone, and HTTP response code to the PHP error log
-if (isset($apiKey) && isset($userTimezone)) {
-    // Try to get the last HTTP response code if available
-    $httpResponseCode = null;
-    if (isset($httpCode)) {
-        $httpResponseCode = $httpCode;
-    } elseif (function_exists('http_response_code')) {
-        $httpResponseCode = http_response_code();
-    }
-    $logMessage = 'Slide Dashboard - API Key: ' . $apiKey . ', Timezone: ' . $userTimezone . ', HTTP Response Code: ' . (is_null($httpResponseCode) ? 'N/A' : $httpResponseCode);
-    error_log($logMessage);
-}
             try {
                 // Initialize API
                 $api = new SlideAPI($apiKey);
@@ -252,7 +239,7 @@ if (isset($apiKey) && isset($userTimezone)) {
                                     <span class="value value--tnums"><?php echo $stats['total_devices']; ?></span>
                                     <span class="label">Total Devices</span>
                                     <div class="mt--5">
-                                        <span class="description"><?php echo $stats['total_snapshots']; ?> snapshots stored</span>
+                                        <span class="description">Snapshot history available in Slide</span>
                                     </div>
                                 </div>
                             </div>

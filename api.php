@@ -1,15 +1,18 @@
 <?php
+require_once __DIR__ . "/SlideClient.php";
 /**
  * Slide API Helper Class
  * Provides methods for interacting with the Slide backup API
  */
 class SlideAPI {
     private $apiKey;
+    private $client;
     private $baseUrl = 'https://api.slide.tech/v1';
     private $headers = [];
     
-    public function __construct($apiKey) {
+    public function __construct($apiKey, ?SlideClient $client = null) {
         $this->apiKey = $apiKey;
+        $this->client = $client ?? new SlideClient($apiKey);
         $this->headers = [
             'Authorization: Bearer ' . $this->apiKey,
             'Content-Type: application/json'
@@ -20,6 +23,7 @@ class SlideAPI {
      * Make API request
      */
     private function request($endpoint, $params = [], $method = 'GET') {
+        if ($method === 'GET') return $this->client->get(ltrim($endpoint, '/'), $params);
         $url = $this->baseUrl . $endpoint;
         
         if ($method === 'GET' && !empty($params)) {
@@ -61,12 +65,7 @@ class SlideAPI {
      * Get list of clients
      */
     public function getClients($limit = 50, $offset = 0) {
-        return $this->request('/client', [
-            'limit' => $limit,
-            'offset' => $offset,
-            'sort_by' => 'id',
-            'sort_asc' => true
-        ]);
+        return ['data' => $this->client->all('client', ['sort_by'=>'id', 'sort_asc'=>'true'])];
     }
     
     /**
@@ -185,7 +184,7 @@ class SlideAPI {
             'successful_backups_24h' => 0,
             'failed_backups_24h' => 0,
             'pending_backups' => 0,
-            'total_snapshots' => 0,
+            'total_snapshots' => null,
             'active_alerts' => 0,
             'agents_by_status' => [],
             'backup_trends' => [],
@@ -197,8 +196,8 @@ class SlideAPI {
         
         try {
             // Get devices
-            $devices = $this->getDevices($clientId);
-            $stats['total_devices'] = $devices['pagination']['total'] ?? 0;
+            $devices = ['data'=>$this->client->all('device', $clientId ? ['client_id'=>$clientId] : [])];
+            $stats['total_devices'] = count($devices['data']);
             
             // Calculate storage
             if (isset($devices['data'])) {
@@ -209,8 +208,8 @@ class SlideAPI {
             }
             
             // Get agents
-            $agents = $this->getAgents($clientId);
-            $stats['total_agents'] = $agents['pagination']['total'] ?? 0;
+            $agents = ['data'=>$this->client->all('agent', $clientId ? ['client_id'=>$clientId] : [])];
+            $stats['total_agents'] = count($agents['data']);
             
             // Get recent backups (last 24 hours)
             // Need to fetch enough backups to cover 24 hours - may be more than 50
@@ -218,89 +217,15 @@ class SlideAPI {
             $dayAgo = $now - (24 * 60 * 60);
             $weekAgo = $now - (7 * 24 * 60 * 60);
             
-            // Fetch backups in batches until we get all from last 24 hours
-            $allBackups = [];
-            
-            // If we have a client filter, we need to fetch backups for each of their devices
-            if ($clientId && isset($devices['data'])) {
-                foreach ($devices['data'] as $device) {
-                    $deviceId = $device['device_id'];
-                    $offset = 0;
-                    $limit = 50;
-                    $keepFetching = true;
-                    
-                    while ($keepFetching) {
-                        $backupBatch = $this->getBackups(null, $deviceId, $limit, $offset);
-                        
-                        if (isset($backupBatch['data']) && count($backupBatch['data']) > 0) {
-                            foreach ($backupBatch['data'] as $backup) {
-                                $backupTime = strtotime($backup['started_at']);
-                                
-                                // Only add backups from last 24 hours
-                                if ($backupTime >= $dayAgo) {
-                                    $allBackups[] = $backup;
-                                } else {
-                                    // If this backup is older than 24 hours, stop fetching for this device
-                                    $keepFetching = false;
-                                    break;
-                                }
-                            }
-                            
-                            // If we got fewer results than the limit, we've reached the end
-                            if (count($backupBatch['data']) < $limit) {
-                                $keepFetching = false;
-                            }
-                            
-                            $offset += $limit;
-                            
-                            // Safety limit to prevent infinite loops
-                            if ($offset >= 500) {
-                                $keepFetching = false;
-                            }
-                        } else {
-                            $keepFetching = false;
-                        }
-                    }
-                }
-            } else {
-                // No client filter - fetch all backups
-                $offset = 0;
-                $limit = 50;
-                $keepFetching = true;
-                
-                while ($keepFetching) {
-                    $backupBatch = $this->getBackups(null, null, $limit, $offset);
-                    
-                    if (isset($backupBatch['data']) && count($backupBatch['data']) > 0) {
-                        foreach ($backupBatch['data'] as $backup) {
-                            $backupTime = strtotime($backup['started_at']);
-                            
-                            // Add backup to our collection
-                            $allBackups[] = $backup;
-                            
-                            // If this backup is older than 24 hours, we can stop fetching
-                            if ($backupTime < $dayAgo) {
-                                $keepFetching = false;
-                                break;
-                            }
-                        }
-                        
-                        // If we got fewer results than the limit, we've reached the end
-                        if (count($backupBatch['data']) < $limit) {
-                            $keepFetching = false;
-                        }
-                        
-                        $offset += $limit;
-                        
-                        // Safety limit to prevent infinite loops - max 1000 backups
-                        if ($offset >= 1000) {
-                            $keepFetching = false;
-                            error_log('Warning: Reached 1000 backup limit in getBackupStats');
-                        }
-                    } else {
-                        $keepFetching = false;
-                    }
-                }
+            // Fetch the full seven-day window used by both the daily and weekly charts.
+            $query = ['backup_started_after'=>gmdate('c', $weekAgo), 'sort_by'=>'start_time', 'sort_asc'=>'false'];
+            $allBackups = $this->client->all('backup', $query);
+            if ($clientId) {
+                // A client's agents may be hosted on another client's device.
+                $clientAgents = array_column($agents['data'], 'agent_id');
+                $allBackups = array_values(array_filter($allBackups, static fn($backup) =>
+                    in_array($backup['agent_id'] ?? '', $clientAgents, true)
+                ));
             }
             
             $backups = ['data' => $allBackups];
@@ -392,40 +317,15 @@ class SlideAPI {
                 ];
             }
             
-            // Get snapshots count - filter by client's agents if clientId is set
-            if ($clientId && isset($agents['data'])) {
-                $totalSnapshots = 0;
-                foreach ($agents['data'] as $agent) {
-                    $agentSnapshots = $this->getSnapshots($agent['agent_id'], 1, 0);
-                    $totalSnapshots += $agentSnapshots['pagination']['total'] ?? 0;
-                }
-                $stats['total_snapshots'] = $totalSnapshots;
-            } else {
-                // No client filter - get all snapshots
-                $snapshots = $this->getSnapshots();
-                $stats['total_snapshots'] = $snapshots['pagination']['total'] ?? 0;
-            }
-            
-            // Get active alerts - filter by client's devices if clientId is set
-            $allAlerts = [];
-            $totalAlerts = 0;
-            
-            if ($clientId && isset($devices['data'])) {
-                // Get alerts for each device belonging to this client
-                foreach ($devices['data'] as $device) {
-                    $deviceAlerts = $this->getAlerts($device['device_id'], null, false, 50);
-                    if (isset($deviceAlerts['data'])) {
-                        $allAlerts = array_merge($allAlerts, $deviceAlerts['data']);
-                    }
-                    $totalAlerts += $deviceAlerts['pagination']['total'] ?? 0;
-                }
-                $stats['active_alerts'] = count($allAlerts); // Use actual count since we may have duplicates
-            } else {
-                // No client filter - get all alerts
-                $alerts = $this->getAlerts(null, null, false, 10);
-                $allAlerts = $alerts['data'] ?? [];
-                $stats['active_alerts'] = $alerts['pagination']['total'] ?? 0;
-            }
+            // The API no longer supplies a total; do not present an invented zero.
+            $stats['total_snapshots'] = null;
+            $allAlerts = $this->client->all('alert', ['resolved'=>'false']);
+            $deviceIds = array_column($devices['data'], 'device_id');
+            $agentIds = array_column($agents['data'], 'agent_id');
+            $allAlerts = array_values(array_filter($allAlerts, static fn($a) =>
+                !($a['resolved'] ?? false) && (!$clientId || in_array($a['device_id'] ?? '', $deviceIds, true) || in_array($a['agent_id'] ?? '', $agentIds, true))
+            ));
+            $stats['active_alerts'] = count($allAlerts);
             
             // Get newest unresolved alerts with details
             $stats['recent_alerts'] = [];
@@ -443,7 +343,7 @@ class SlideAPI {
                 foreach ($alertsToShow as $alert) {
                     $alertInfo = [];
                     $alertInfo['id'] = $alert['alert_id'] ?? '';
-                    $alertInfo['type'] = $alert['alert_type'] ?? '';
+                    $alertInfo['type'] = ($alert['alert_type'] ?? $alert['type'] ?? 'unknown') ?? '';
                     $alertInfo['created_at'] = $alert['created_at'] ?? '';
                     
                     // Parse alert_fields JSON if it exists
@@ -453,8 +353,8 @@ class SlideAPI {
                     }
                     
                     // Format alert message based on type
-                    $alertInfo['title'] = $this->formatAlertTitle($alert['alert_type']);
-                    $alertInfo['message'] = $this->formatAlertMessage($alert['alert_type'], $fields);
+                    $alertInfo['title'] = $this->formatAlertTitle(($alert['alert_type'] ?? $alert['type'] ?? 'unknown'));
+                    $alertInfo['message'] = $this->formatAlertMessage(($alert['alert_type'] ?? $alert['type'] ?? 'unknown'), $fields);
                     
                     // Extract relevant metadata
                     $alertInfo['device_name'] = $fields['device']['name'] ?? 'Unknown Device';
@@ -463,7 +363,7 @@ class SlideAPI {
                     $alertInfo['agent_hostname'] = $fields['agent']['hostname'] ?? '';
                     
                     // Format time ago
-                    $alertInfo['time_ago'] = $this->formatTimeAgo($alert['created_at']);
+                    $alertInfo['time_ago'] = $this->formatTimeAgo($alert['created_at'] ?? '');
                     
                     $stats['recent_alerts'][] = $alertInfo;
                 }
@@ -493,8 +393,8 @@ class SlideAPI {
             }
             
         } catch (Exception $e) {
-            // Log error but return partial stats
-            error_log('Error getting backup stats: ' . $e->getMessage());
+            // A failed source must never look like a healthy zero-count fleet.
+            throw new RuntimeException('Unable to load complete backup statistics. Please retry.', 502, $e);
         }
         
         return $stats;
@@ -517,7 +417,7 @@ class SlideAPI {
      * Format time ago
      */
     public static function timeAgo($datetime) {
-        $timestamp = strtotime($datetime);
+        if (!$datetime || !($timestamp = strtotime($datetime))) return 'Time unavailable';
         $diff = time() - $timestamp;
         
         if ($diff < 60) {

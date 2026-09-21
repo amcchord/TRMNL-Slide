@@ -217,3 +217,7 @@ Common messages include:
 
 - Do not embed your API key in public templates or screenshots.
 - Prefer POSTing JSON from TRMNL when possible to avoid overly long URLs.
+
+## September 2026 modernization
+
+See [the modernization notes](docs/modernization.md) for scope, API behavior, validation, and deployment considerations.

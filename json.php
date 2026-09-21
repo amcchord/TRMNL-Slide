@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $userTimezone = isset($postData['timezone']) ? trim($postData['timezone']) : 'EST';
             
             // Optional: Log POST request for debugging
-            // error_log('JSON POST received - API Key: ' . substr($apiKey, 0, 10) . '..., Client: ' . $clientFilter . ', TZ: ' . $userTimezone);
+
         } else {
             // Invalid JSON received
             $response = [
