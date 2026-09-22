@@ -81,3 +81,30 @@ body:has(.trmnl-setup) .layout {
   background: #f5f7fb;
   display: flow-root;
 }
+
+.trmnl-setup, .trmnl-setup * {
+  box-sizing: border-box;
+}
+.trmnl-connection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0 24px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #eef8f2;
+  color: #246440;
+  font-size: 12px;
+  font-weight: 550;
+}
+.trmnl-connection a {
+  color: inherit;
+}
+@media (max-width: 480px) {
+  .trmnl-setup {
+    margin: 24px auto;
+    padding: 24px;
+  }
+}
