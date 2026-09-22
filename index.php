@@ -4,11 +4,19 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 header('Cache-Control: post-check=0, pre-check=0', false);
 header('Pragma: no-cache');
 header('Expires: 0');
+header('Referrer-Policy: no-referrer');
+header('X-Content-Type-Options: nosniff');
+require_once __DIR__ . '/RecipesConnection.php';
+$connection = trmnlConnection($_POST, $_GET, $_COOKIE);
+$apiKey = $connection['key'];
+$clientFilter = trmnlInput($_POST, 'client_filter') ?: trmnlInput($_GET, 'client_filter');
+$userTimezone = trmnlInput($_POST, 'timezone') ?: trmnlInput($_GET, 'timezone', 'EST');
+$previewRequested = $connection['source'] === 'explicit' || trmnlInput($_POST, 'preview') === '1' || trmnlInput($_GET, 'preview') === '1';
 
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,7 +130,7 @@ header('Expires: 0');
             border-radius: 10px;
         }
     </style>
-<link rel="stylesheet" href="/trmnl/setup.css">
+<link rel="stylesheet" href="/trmnl/setup.css?v=<?= substr(hash_file('sha256', __DIR__ . '/setup.css'), 0, 12) ?>">
 </head>
 <body class="environment trmnl">
     <div class="screen">
@@ -131,9 +139,6 @@ header('Expires: 0');
         require_once 'api.php';
         
         // Get form parameters
-        $apiKey = isset($_POST['api_key']) ? trim($_POST['api_key']) : (isset($_GET['api_key']) ? trim($_GET['api_key']) : '');
-        $clientFilter = isset($_POST['client_filter']) ? trim($_POST['client_filter']) : (isset($_GET['client_filter']) ? trim($_GET['client_filter']) : '');
-        $userTimezone = isset($_POST['timezone']) ? trim($_POST['timezone']) : (isset($_GET['timezone']) ? trim($_GET['timezone']) : 'EST');
         
         // Map timezone abbreviations to PHP timezone identifiers
         $timezoneMap = [
@@ -147,12 +152,29 @@ header('Expires: 0');
         $phpTimezone = $timezoneMap[$userTimezone] ?? 'America/New_York';
         date_default_timezone_set($phpTimezone);
         
-        // Show configuration form if no API key
-        if (empty($apiKey)) {
+        // Keep the client filter available before loading a connected preview.
+        if ($apiKey === '' || !$previewRequested) {
             ?>
             <div class="view view--full">
                 <div class="layout">
-                        <div class="trmnl-setup"><a href="/index.php">← Recipes workspace</a><h1>TRMNL display</h1><p>A quiet, glanceable view of your backup fleet for your e-ink screen.</p><form method="post"><label for="trmnl-key">Slide API key</label><input type="password" name="api_key" id="trmnl-key" required autocomplete="off" placeholder="tk_…"><label for="trmnl-client">Client name filter (optional)</label><input name="client_filter" id="trmnl-client" placeholder="All clients"><button type="submit">Preview display →</button></form></div>
+                        <div class="trmnl-setup">
+                            <a href="/index.php">← Recipes workspace</a>
+                            <h1>TRMNL display</h1>
+                            <?php if ($connection['source'] === 'recipes'): ?>
+                                <div class="trmnl-connection"><span>Connected through Recipes</span><a href="/manageKey.php">Manage connection</a></div>
+                            <?php endif; ?>
+                            <form method="post" action="./">
+                                <input type="hidden" name="preview" value="1">
+                                <input type="hidden" name="timezone" value="<?= htmlspecialchars($userTimezone, ENT_QUOTES, 'UTF-8') ?>">
+                                <?php if ($connection['source'] !== 'recipes'): ?>
+                                    <label for="trmnl-key">Slide API key</label>
+                                    <input type="password" name="api_key" id="trmnl-key" required autocomplete="off" placeholder="tk_…">
+                                <?php endif; ?>
+                                <label for="trmnl-client">Client name filter (optional)</label>
+                                <input name="client_filter" id="trmnl-client" placeholder="All clients" value="<?= htmlspecialchars($clientFilter, ENT_QUOTES, 'UTF-8') ?>">
+                                <button type="submit">Preview display →</button>
+                            </form>
+                        </div>
                 </div>
             </div>
             <?php
@@ -414,7 +436,7 @@ header('Expires: 0');
                         <div class="error-message">
                             <h3>Error Loading Dashboard</h3>
                             <p><?php echo htmlspecialchars($e->getMessage()); ?></p>
-                            <p><a href="?">Try Again</a></p>
+                            <p><a href="./">Back to setup</a><?php if ($connection['source'] === 'recipes'): ?> · <a href="/manageKey.php">Manage connection</a><?php endif; ?></p>
                         </div>
                     </div>
                 </div>

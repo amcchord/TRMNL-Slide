@@ -7,7 +7,7 @@
  * 2. POST JSON body: {"api_key": "XXX", "client_filter": "XXX", "timezone": "EST"}
  * 
  * Parameters:
- * - api_key (required): Your Slide API key
+ * - api_key: Your Slide API key; the Recipes connection is used when omitted
  * - client_filter (optional): Filter by client name
  * - timezone (optional): EST, CST, MST, or PST (default: EST)
  * 
@@ -20,12 +20,15 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 header('Cache-Control: post-check=0, pre-check=0', false);
 header('Pragma: no-cache');
 header('Expires: 0');
+header('Referrer-Policy: no-referrer');
+header('X-Content-Type-Options: nosniff');
+require_once __DIR__ . '/RecipesConnection.php';
 
 // Include API helper
 require_once 'api.php';
 
 // Initialize parameters
-$apiKey = '';
+$postData = [];
 $clientFilter = '';
 $userTimezone = 'EST';
 
@@ -39,9 +42,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         if (json_last_error() === JSON_ERROR_NONE && is_array($postData)) {
             // Get parameters from JSON POST data
-            $apiKey = isset($postData['api_key']) ? trim($postData['api_key']) : '';
-            $clientFilter = isset($postData['client_filter']) ? trim($postData['client_filter']) : '';
-            $userTimezone = isset($postData['timezone']) ? trim($postData['timezone']) : 'EST';
+            // Credential selection happens once below, including the Recipes cookie.
+            $clientFilter = trmnlInput($postData, 'client_filter');
+            $userTimezone = trmnlInput($postData, 'timezone', 'EST');
             
             // Optional: Log POST request for debugging
 
@@ -59,14 +62,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // If parameters weren't set via POST, check GET parameters
-if (empty($apiKey)) {
-    $apiKey = isset($_GET['api_key']) ? trim($_GET['api_key']) : '';
-}
+$connection = trmnlConnection($postData, $_GET, $_COOKIE);
+$apiKey = $connection['key'];
 if (empty($clientFilter)) {
-    $clientFilter = isset($_GET['client_filter']) ? trim($_GET['client_filter']) : '';
+    $clientFilter = trmnlInput($_GET, 'client_filter');
 }
 if ($userTimezone === 'EST' && isset($_GET['timezone'])) {
-    $userTimezone = trim($_GET['timezone']);
+    $userTimezone = trmnlInput($_GET, 'timezone');
 }
 
 // Map timezone abbreviations to PHP timezone identifiers
